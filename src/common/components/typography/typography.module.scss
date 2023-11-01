@@ -1,0 +1,57 @@
+@mixin typography($font-size: m, $font-weight: bold, $line-height: m) {
+  font-size: var(--font-size-$font-size);
+  font-weight: var(--font-weight-$font-weight);
+  line-height: var(--line-height-$line-height);
+  color: var(--color-dark-900);
+}
+
+.large {
+  @include typography(xxl, $line-height: l);
+}
+
+.h1 {
+  @include typography(xl, $line-height: l);
+}
+
+.h2 {
+  @include typography(l);
+}
+
+.h3,
+.subtitle1 {
+  @include typography;
+}
+
+.body1 {
+  @include typography($font-weight: regular);
+}
+
+.body2 {
+  @include typography(s, regular);
+}
+
+.subtitle2 {
+  @include typography(s);
+}
+
+.caption {
+  @include typography(xs, regular, s);
+}
+
+.overline {
+  @include typography(xs, $line-height: s);
+}
+
+.link1 {
+  @include typography(s, regular);
+}
+
+.link2 {
+  @include typography(xs, regular, $line-height: s);
+}
+
+.link1,
+.link2 {
+  color: var(--color-info-500);
+  text-decoration-line: underline;
+}

@@ -1,6 +1,6 @@
 :root {
-  /*Цвета. Их можно поменять здесь, для этого код цвета (#цифры) нужно заменить на нужный в соответствующей строке,
-  после чего сохранить файл, и цвет изменится во всех местах, где он применяется*/
+  /* Цвета. Их можно поменять здесь, для этого код цвета (#цифры) нужно заменить на нужный в соответствующей строке,
+  после чего сохранить файл, и цвет изменится во всех местах, где он применяется */
   --color-light-100: #fff;
   --color-light-300: #c3c1c7;
   --color-accent-100: #F4800F;
@@ -8,15 +8,15 @@
   --color-dark-100: #4c4c4c;
   --color-dark-300: #000;
 
-  /*Шрифт. Чтобы заменить основной шрифт нужно указать название нужного шрифта в строке ниже*/
+  /* Шрифт. Чтобы заменить основной шрифт нужно указать название нужного шрифта в строке ниже */
   --font-family-primary: 'Roboto', sans-serif;
 
-  /*Виды высоты шрифта*/
+  /* Виды высоты шрифта */
   --line-height-s: 16px;
   --line-height-m: 24px;
   --line-height-l: 36px;
 
-  /*Размеры шрифта*/
+  /* Размеры шрифта */
   --font-size-xs: 0.75rem;
   --font-size-s: 0.875rem;
   --font-size-m: 1rem;
@@ -24,48 +24,13 @@
   --font-size-xl: 1.25rem;
   --font-size-xxl: 1.625rem;
 
-  /*Жирность шрифта*/
+  /* Жирность шрифта */
   --font-weight-regular: 400;
   --font-weight-bold: 700;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box;padding: 0;margin: 0;
 }
 
 html,
@@ -75,13 +40,9 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: var(--font-family-primary);
+  color: var(--color-dark-300);
+  background: var(--color-light-100);
 }
 
 a {
@@ -89,8 +50,4 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+
