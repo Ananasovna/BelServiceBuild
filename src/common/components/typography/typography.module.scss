@@ -34,14 +34,6 @@
   @include typography(s);
 }
 
-.caption {
-  @include typography(xs, regular, s);
-}
-
-.overline {
-  @include typography(xs, $line-height: s);
-}
-
 .link1 {
   @include typography(s, regular);
 }

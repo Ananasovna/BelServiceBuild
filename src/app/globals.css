@@ -3,10 +3,12 @@
   после чего сохранить файл, и цвет изменится во всех местах, где он применяется */
   --color-light-100: #fff;
   --color-light-300: #c3c1c7;
-  --color-accent-100: #F4800F;
-  --color-accent-300: #CE5D00;
+  --color-accent-100: #f7ba81;
+  --color-accent-300: #f4800f;
+  --color-accent-500: #ce5d00;
   --color-dark-100: #4c4c4c;
-  --color-dark-300: #000;
+  --color-dark-300: #171717;
+  --color-dark-500: #000;
 
   /* Шрифт. Чтобы заменить основной шрифт нужно указать название нужного шрифта в строке ниже */
   --font-family-primary: 'Roboto', sans-serif;
@@ -30,13 +32,15 @@
 }
 
 * {
-  box-sizing: border-box;padding: 0;margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-  max-width: 100vw;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
@@ -49,5 +53,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-
