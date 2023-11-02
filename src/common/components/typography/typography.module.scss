@@ -1,20 +1,24 @@
-@mixin typography($font-size: m, $font-weight: bold, $line-height: m) {
-  font-size: var(--font-size-$font-size);
-  font-weight: var(--font-weight-$font-weight);
-  line-height: var(--line-height-$line-height);
-  color: var(--color-dark-900);
+@mixin typography(
+  $font-size: var(--font-size-m),
+  $font-weight: var(--font-weight-bold),
+  $line-height: var(--line-height-m)
+) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: var(--color-dark-500);
 }
 
 .large {
-  @include typography(xxl, $line-height: l);
+  @include typography(var(--font-size-xxl), $line-height: var(--line-height-l));
 }
 
 .h1 {
-  @include typography(xl, $line-height: l);
+  @include typography(var(--font-size-xl), $line-height: var(--line-height-l));
 }
 
 .h2 {
-  @include typography(l);
+  @include typography(var(--font-size-l));
 }
 
 .h3,
@@ -23,23 +27,27 @@
 }
 
 .body1 {
-  @include typography($font-weight: regular);
+  @include typography($font-weight: var(--font-weight-regular));
 }
 
 .body2 {
-  @include typography(s, regular);
+  @include typography(var(--font-size-s), var(--font-weight-regular));
 }
 
 .subtitle2 {
-  @include typography(s);
+  @include typography(var(--font-size-s));
 }
 
 .link1 {
-  @include typography(s, regular);
+  @include typography(var(--font-size-s), var(--font-weight-regular));
 }
 
 .link2 {
-  @include typography(xs, regular, $line-height: s);
+  @include typography(
+    var(--font-size-xs),
+    var(--font-weight-regular),
+    $line-height: var(--line-height-s)
+  );
 }
 
 .link1,
