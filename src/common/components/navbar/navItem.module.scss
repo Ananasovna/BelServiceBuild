@@ -1,0 +1,18 @@
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  padding: 0 10px;
+
+  &:hover {
+    color: var(--color-light-100);
+    background: var(--color-accent-300);
+  }
+}
+
+.activeLink {
+  color: var(--color-light-100);
+  background: var(--color-accent-300);
+}

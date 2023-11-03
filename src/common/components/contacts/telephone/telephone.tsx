@@ -9,7 +9,7 @@ export const Telephone = () => {
     <div>
       <Link className={s.wrapper} href={'tel:+79622575839'}>
         <TelephoneIcon height={'20px'} width={'20px'} />
-        <Typography variant={'subtitle1'}>+7 (000) 000 00 00</Typography>
+        <Typography variant={'subtitle2'}>+7 (000) 000 00 00</Typography>
       </Link>
     </div>
   )

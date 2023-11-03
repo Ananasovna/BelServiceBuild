@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.activeLink {
+  color: var(--color-light-100);
+  background: var(--color-accent-300);
+}

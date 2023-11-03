@@ -1,5 +1,6 @@
 import logo from '@/../public/image/logo.jpg'
 import { Telephone } from '@/common/components/contacts/telephone/telephone'
+import { Navbar } from '@/common/components/navbar/navbar'
 import { Typography } from '@/common/components/typography/typography'
 import Image from 'next/image'
 
@@ -12,8 +13,8 @@ export const Header = () => {
         <Image alt={'Логотип компании'} className={s.logo} src={logo} />
         <Typography variant={'large'}>BelServiceBuild</Typography>
       </div>
-
       <Telephone />
+      <Navbar />
     </div>
   )
 }
