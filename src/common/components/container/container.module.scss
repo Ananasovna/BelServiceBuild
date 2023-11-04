@@ -1,10 +1,11 @@
 .container {
   display: flex;
+  flex-direction: column;
   gap: 50px;
   align-items: center;
   justify-content: center;
 
-  max-width: 100%;
+  max-width: 1200px;
   height: 100%;
-  padding: 50px 280px;
+  padding: 50px 0;
 }

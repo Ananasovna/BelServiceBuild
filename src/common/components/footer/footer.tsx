@@ -6,7 +6,7 @@ import s from './footer.module.scss'
 export const Footer = () => {
   return (
     <footer className={s.footer}>
-      <Container>
+      <Container className={s.footerContainer}>
         <div className={s.logoWrapper}>{/*<Logo />*/}</div>
       </Container>
     </footer>

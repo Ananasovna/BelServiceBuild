@@ -1,6 +1,6 @@
 import About from '@/app/about/page'
-import Services from '@/app/services/page'
 import { LinksServices } from '@/common/components/linksServices/linksServices'
+import { Services } from '@/common/components/services/services'
 
 import s from './page.module.css'
 

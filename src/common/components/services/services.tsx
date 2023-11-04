@@ -1,5 +1,5 @@
 import { Container } from '@/common/components/container/container'
-import { ServiceItem } from '@/common/components/serviceItem/serviceItem'
+import { ServiceItem } from '@/common/components/services/serviceItem/serviceItem'
 import { Typography } from '@/common/components/typography/typography'
 import { CartIcon } from '@/common/icons/cartIcon'
 import { ElectricityIcon } from '@/common/icons/electricityIcon'
@@ -14,8 +14,8 @@ type ServicesProps = {
 
 import { ReactNode } from 'react'
 
-import s from './page.module.scss'
-const Services = ({ children }: ServicesProps) => {
+import s from './services.module.scss'
+export const Services = ({ children }: ServicesProps) => {
   return (
     <div>
       <Container className={s.servicesContainer}>
@@ -27,31 +27,23 @@ const Services = ({ children }: ServicesProps) => {
         </div>
 
         <div className={s.services}>
-          <ServiceItem>
+          <ServiceItem title={'1. Демонтажные работы'}>
             <CartIcon />
-            <Typography variant={'subtitle1'}>1. Демонтажные работы</Typography>
           </ServiceItem>
-          <ServiceItem>
+          <ServiceItem title={'2. Электромонтажные работы'}>
             <ElectricityIcon />
-            <Typography variant={'subtitle1'}>2. Электромонтажные работы</Typography>
           </ServiceItem>
-          <ServiceItem>
+          <ServiceItem title={'3. Сантехнические работы'}>
             <PlumbingIcon />
-            <Typography variant={'subtitle1'}>3. Сантехнические работы</Typography>
           </ServiceItem>
-          <ServiceItem>
+          <ServiceItem title={'4. Проектировочные работы'}>
             <ProjectIcon />
-            <Typography variant={'subtitle1'}>4. Проектировочные работы</Typography>
           </ServiceItem>
-          <ServiceItem>
+          <ServiceItem title={'5. Отделочные работы'}>
             <RollerIcon />
-            <Typography variant={'subtitle1'}>5. Отделочные работы</Typography>
           </ServiceItem>
-          <ServiceItem>
-            <SnowflakeIcon width={'80px'} />
-            <Typography variant={'subtitle1'}>
-              6. Отопление, вентиляция и кондиционирование
-            </Typography>
+          <ServiceItem title={'6. Отопление, вентиляция и кондиционирование'}>
+            <SnowflakeIcon />
           </ServiceItem>
         </div>
         {children}
@@ -59,5 +51,3 @@ const Services = ({ children }: ServicesProps) => {
     </div>
   )
 }
-
-export default Services

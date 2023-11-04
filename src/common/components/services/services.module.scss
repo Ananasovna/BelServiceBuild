@@ -5,8 +5,8 @@
 
 .services {
   display: flex;
-  flex-flow: column wrap;
-  gap: 10px 50px;
+  flex-wrap: wrap;
+  gap: 10px 20px;
   justify-content: space-between;
 
   height: 200px;

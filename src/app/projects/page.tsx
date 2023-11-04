@@ -1,11 +1,12 @@
 import { Container } from '@/common/components/container/container'
+import { ProjectCard } from '@/common/components/projectCard/projectCard'
 import { Typography } from '@/common/components/typography/typography'
 
-import s from '@/app/services/page.module.scss'
+import s from './page.module.scss'
 
 const Projects = () => {
   return (
-    <div>
+    <div className={s.wrapper}>
       <Container>
         <div className={s.titleWrapper}>
           <Typography className={s.title} variant={'large'}>
@@ -14,11 +15,11 @@ const Projects = () => {
           <div className={s.underline}></div>
         </div>
         <div className={s.projectsWrapper}>
-          <div className={s.project}>
-            <div className={s.projectName}>
-              <Typography variant={'h3'}>Проект 1</Typography>
-            </div>
-          </div>
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
         </div>
       </Container>
     </div>

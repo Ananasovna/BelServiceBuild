@@ -2,6 +2,7 @@
   display: flex;
   gap: 40px;
   align-items: center;
+  justify-content: center;
 }
 
 .title::after {
@@ -17,6 +18,7 @@
 }
 
 .aboutContainer {
+  flex-direction: row;
   gap: 60px;
 }
 

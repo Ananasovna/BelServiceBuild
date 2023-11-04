@@ -30,7 +30,7 @@
 }
 
 .body1 {
-  @include typography($font-weight: var(--font-weight-regular));
+  @include typography(var(--font-size-m), var(--font-weight-regular));
 }
 
 .body2 {

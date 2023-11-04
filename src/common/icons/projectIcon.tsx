@@ -1,6 +1,6 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
-export const ProjectIcon = ({ color = '#000', height = '50px', width = '50px' }: IconProps) => {
+export const ProjectIcon = ({ color = '#000', height = '60px', width = '60px' }: IconProps) => {
   return (
     <svg
       height={height}
