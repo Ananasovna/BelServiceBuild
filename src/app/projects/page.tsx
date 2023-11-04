@@ -13,6 +13,13 @@ const Projects = () => {
           </Typography>
           <div className={s.underline}></div>
         </div>
+        <div className={s.projectsWrapper}>
+          <div className={s.project}>
+            <div className={s.projectName}>
+              <Typography variant={'h3'}>Проект 1</Typography>
+            </div>
+          </div>
+        </div>
       </Container>
     </div>
   )
