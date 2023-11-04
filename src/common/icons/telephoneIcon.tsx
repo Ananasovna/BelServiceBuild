@@ -1,14 +1,10 @@
-type TelephoneIconProps = {
+export type IconProps = {
   color?: string
   height?: string
   width?: string
 }
 
-export const TelephoneIcon = ({
-  color = '#000',
-  height = '30px',
-  width = '30px',
-}: TelephoneIconProps) => {
+export const TelephoneIcon = ({ color = '#000', height = '30px', width = '30px' }: IconProps) => {
   return (
     <svg
       fill={color}

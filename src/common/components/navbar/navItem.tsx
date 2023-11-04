@@ -19,7 +19,7 @@ export const NavItem = ({ navItem }: NavItemProps) => {
 
   return (
     <Link className={clsx(s.navItem, activeClass)} href={navItem.path}>
-      <Typography className={activeClass} variant={'subtitle1'}>
+      <Typography className={activeClass} variant={'subtitle2'}>
         {navItem.title}
       </Typography>
     </Link>

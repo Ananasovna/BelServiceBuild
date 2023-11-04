@@ -1,7 +1,4 @@
 import { NavItem } from '@/common/components/navbar/navItem'
-import { Typography } from '@/common/components/typography/typography'
-import { clsx } from 'clsx'
-import Link from 'next/link'
 
 import s from './navbar.module.scss'
 
@@ -21,34 +18,5 @@ export const Navbar = () => {
 
   const mappedNavigation = navigation.map(el => <NavItem key={el.id} navItem={el}></NavItem>)
 
-  return (
-    <nav className={s.wrapper}>
-      {/*<div className={clsx(s.navItem, s.activeLink)}>*/}
-      {/*  <Link href={'/'}>*/}
-      {/*    <Typography variant={'subtitle1'}></Typography>*/}
-      {/*  </Link>*/}
-      {/*</div>*/}
-      {/*<div className={s.navItem}>*/}
-      {/*  <Link href={'/about'}>*/}
-      {/*    <Typography variant={'subtitle1'}>О нас</Typography>*/}
-      {/*  </Link>*/}
-      {/*</div>*/}
-      {/*<div className={s.navItem}>*/}
-      {/*  <Link href={'/services'}>*/}
-      {/*    <Typography variant={'subtitle1'}>Услуги</Typography>*/}
-      {/*  </Link>*/}
-      {/*</div>*/}
-      {/*<div className={s.navItem}>*/}
-      {/*  <Link href={'/projects'}>*/}
-      {/*    <Typography variant={'subtitle1'}>Наши проекты</Typography>*/}
-      {/*  </Link>*/}
-      {/*</div>*/}
-      {/*<div className={s.navItem}>*/}
-      {/*  <Link href={'/contacts'}>*/}
-      {/*    <Typography variant={'subtitle1'}>Контакты</Typography>*/}
-      {/*  </Link>*/}
-      {/*</div>*/}
-      {mappedNavigation}
-    </nav>
-  )
+  return <nav className={s.wrapper}>{mappedNavigation}</nav>
 }

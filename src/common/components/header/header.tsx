@@ -1,20 +1,18 @@
-import logo from '@/../public/image/logo.jpg'
 import { Telephone } from '@/common/components/contacts/telephone/telephone'
+import { Container } from '@/common/components/container/container'
+import { Logo } from '@/common/components/logo/logo'
 import { Navbar } from '@/common/components/navbar/navbar'
-import { Typography } from '@/common/components/typography/typography'
-import Image from 'next/image'
 
 import s from './header.module.scss'
 
 export const Header = () => {
   return (
-    <div className={s.header}>
-      <div className={s.logoWrapper}>
-        <Image alt={'Логотип компании'} className={s.logo} src={logo} />
-        <Typography variant={'large'}>BelServiceBuild</Typography>
-      </div>
-      <Telephone />
-      <Navbar />
-    </div>
+    <header className={s.header}>
+      <Container className={s.headerContainer}>
+        <Logo />
+        <Telephone />
+        <Navbar />
+      </Container>
+    </header>
   )
 }

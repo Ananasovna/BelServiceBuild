@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.title::after {
+  content: '';
+
+  display: block;
+
+  width: 70px;
+  height: 3px;
+  margin-top: 10px;
+
+  background: var(--color-accent-300);
+}
+
+.aboutContainer {
+  gap: 60px;
+}
+
+.photo {
+  width: auto;
+  max-height: 300px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

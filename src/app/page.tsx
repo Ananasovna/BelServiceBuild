@@ -1,25 +1,17 @@
-import { Button } from '@/common/components/button/button'
-import { Typography } from '@/common/components/typography/typography'
+import About from '@/app/about/page'
+import Services from '@/app/services/page'
+import { LinksServices } from '@/common/components/linksServices/linksServices'
+
+import s from './page.module.css'
 
 export default function Page() {
   return (
-    <div>
-      <h1>Hello, Next.js!</h1>
-      <Typography as={'div'} variant={'body1'}>
-        Привет, это типография
-      </Typography>
-      <Button variant={'primary'}>Подробнее</Button>
-      <Button disabled variant={'primary'}>
-        Подробнее
-      </Button>
-      <Button variant={'secondary'}>Подробнее</Button>
-      <Button disabled variant={'secondary'}>
-        Подробнее
-      </Button>
-      <Button variant={'link'}>Подробнее</Button>
-      <Button disabled variant={'link'}>
-        Подробнее
-      </Button>
+    <div className={s.content}>
+      {/*<LinksServices />*/}
+      <About />
+      <div className={s.servicesWrapper}>
+        <Services />
+      </div>
     </div>
   )
 }

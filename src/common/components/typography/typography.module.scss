@@ -1,5 +1,5 @@
 @mixin typography(
-  $font-size: var(--font-size-m),
+  $font-size: var(--font-size-l),
   $font-weight: var(--font-weight-bold),
   $line-height: var(--line-height-m)
 ) {
@@ -7,11 +7,13 @@
   font-weight: $font-weight;
   line-height: $line-height;
   color: var(--color-dark-500);
-  letter-spacing: 0.7px;
+  letter-spacing: 0.5px;
 }
 
 .large {
   @include typography(var(--font-size-xxl), $line-height: var(--line-height-l));
+
+  text-transform: uppercase;
 }
 
 .h1 {
