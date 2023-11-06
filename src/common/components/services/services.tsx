@@ -28,22 +28,22 @@ export const Services = ({ children }: ServicesProps) => {
 
         <div className={s.services}>
           <ServiceItem title={'1. Демонтажные работы'}>
-            <CartIcon />
+            <CartIcon color={'#ce5d00'} />
           </ServiceItem>
           <ServiceItem title={'2. Электромонтажные работы'}>
-            <ElectricityIcon />
+            <ElectricityIcon color={'#ce5d00'} />
           </ServiceItem>
           <ServiceItem title={'3. Сантехнические работы'}>
-            <PlumbingIcon />
+            <PlumbingIcon color={'#ce5d00'} />
           </ServiceItem>
           <ServiceItem title={'4. Проектировочные работы'}>
-            <ProjectIcon />
+            <ProjectIcon color={'#ce5d00'} />
           </ServiceItem>
           <ServiceItem title={'5. Отделочные работы'}>
-            <RollerIcon />
+            <RollerIcon color={'#ce5d00'} />
           </ServiceItem>
           <ServiceItem title={'6. Отопление, вентиляция и кондиционирование'}>
-            <SnowflakeIcon />
+            <SnowflakeIcon color={'#ce5d00'} />
           </ServiceItem>
         </div>
         {children}

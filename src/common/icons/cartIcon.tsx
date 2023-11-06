@@ -4,6 +4,7 @@ export const CartIcon = ({ color = '#000', height = '60px', width = '60px' }: Ic
   return (
     <svg
       enableBackground={'new 0 0 128 128'}
+      fill={color}
       height={height}
       id={'Слой_1'}
       version={'1.1'}
