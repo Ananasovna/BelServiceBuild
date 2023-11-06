@@ -21,7 +21,7 @@
 }
 
 .h2 {
-  @include typography(var(--font-size-l));
+  @include typography(var(--font-size-xl));
 }
 
 .h3,

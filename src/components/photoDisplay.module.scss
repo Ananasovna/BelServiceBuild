@@ -1,6 +1,8 @@
 .wrapper {
   position: relative;
 
+  //top: 120px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +14,7 @@
 }
 
 .bgWrapper {
-  position: absolute;
+  position: relative;
   z-index: -1;
 
   overflow: hidden;
@@ -28,7 +30,7 @@
 }
 
 .title {
-  position: relative;
+  position: absolute;
   z-index: 1;
   color: var(--color-light-100);
 }

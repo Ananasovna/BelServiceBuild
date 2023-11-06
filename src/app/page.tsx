@@ -9,8 +9,8 @@ export default function Page() {
   return (
     <div className={s.content}>
       <PhotoDisplay />
-      {/*<LinksServices />*/}
       <About />
+      <LinksServices />
       <div className={s.servicesWrapper}>
         <Services />
       </div>
