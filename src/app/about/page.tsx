@@ -1,5 +1,6 @@
 import logo from '@/../public/image/logoFull.jpg'
 import { Container } from '@/common/components/container/container'
+import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
 import { Typography } from '@/common/components/typography/typography'
 import Image from 'next/image'
 
@@ -10,9 +11,11 @@ const About = () => {
     <div className={s.wrapper}>
       <Container className={s.aboutContainer}>
         <div className={s.text}>
-          <Typography className={s.title} variant={'large'}>
-            О нас
-          </Typography>
+          <TitleContainer align={'left'}>
+            <Typography className={s.title} variant={'h1'}>
+              О нас
+            </Typography>
+          </TitleContainer>
           <Typography variant={'body1'}>
             Наша компания оказывает профессиональные услуги{' '}
             <strong>по проектированию, ремонту и обслуживанию коммерческих помещений</strong> в

@@ -14,17 +14,18 @@ type ServicesProps = {
 
 import { ReactNode } from 'react'
 
+import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
+
 import s from './services.module.scss'
 export const Services = ({ children }: ServicesProps) => {
   return (
     <div>
       <Container className={s.servicesContainer}>
-        <div className={s.titleWrapper}>
-          <Typography className={s.title} variant={'large'}>
+        <TitleContainer>
+          <Typography className={s.title} variant={'h1'}>
             Услуги
           </Typography>
-          <div className={s.underline}></div>
-        </div>
+        </TitleContainer>
 
         <div className={s.services}>
           <ServiceItem title={'1. Демонтажные работы'}>

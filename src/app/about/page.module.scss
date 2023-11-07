@@ -5,18 +5,6 @@
   justify-content: center;
 }
 
-.title::after {
-  content: '';
-
-  display: block;
-
-  width: 70px;
-  height: 3px;
-  margin-top: 10px;
-
-  background: var(--color-accent-300);
-}
-
 .aboutContainer {
   flex-direction: row;
   gap: 60px;

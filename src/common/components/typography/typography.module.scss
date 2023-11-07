@@ -18,6 +18,8 @@
 
 .h1 {
   @include typography(var(--font-size-xl), $line-height: var(--line-height-l));
+
+  text-transform: uppercase;
 }
 
 .h2 {

@@ -1,0 +1,16 @@
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alignLeft {
+  align-items: start;
+}
+
+.underline {
+  width: 70px;
+  height: 3px;
+  margin-top: 10px;
+  background: var(--color-accent-300);
+}
