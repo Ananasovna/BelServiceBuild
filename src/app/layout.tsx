@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
-import { Footer } from '@/common/components/footer/footer'
-import { Header } from '@/common/components/header/header'
+import { Footer } from '@/components/footer/footer'
+import { Header } from '@/components/header/header'
 
 import './globals.css'
 

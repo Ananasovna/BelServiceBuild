@@ -1,4 +1,4 @@
-import { NavItem } from '@/common/components/navbar/navItem'
+import { NavItem } from '@/components/navbar/navItem'
 
 import s from './navbar.module.scss'
 
@@ -16,7 +16,7 @@ export const Navbar = () => {
     { id: 5, path: '/contacts', title: 'Контакты' },
   ]
 
-  const mappedNavigation = navigation.map(el => <NavItem key={el.id} navItem={el}></NavItem>)
+  const mappedNavigation = navigation.map(el => <NavItem key={el.id} navItem={el} />)
 
   return <nav className={s.wrapper}>{mappedNavigation}</nav>
 }

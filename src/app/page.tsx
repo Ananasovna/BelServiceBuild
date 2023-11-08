@@ -1,7 +1,9 @@
-import About from '@/app/about/page'
-import { LinksServices } from '@/common/components/linksServices/linksServices'
-import { Services } from '@/common/components/services/services'
+import { About } from '@/components/about/about'
+import { Contacts } from '@/components/contacts/contacts'
+import { LinksServices } from '@/components/linksServices/linksServices'
 import { PhotoDisplay } from '@/components/photoDisplay/photoDisplay'
+import { Projects } from '@/components/projects/projects'
+import { Services } from '@/components/services/services'
 
 import s from './page.module.css'
 
@@ -11,9 +13,11 @@ export default function Page() {
       <PhotoDisplay />
       <About />
       <LinksServices />
-      <div className={s.servicesWrapper}>
-        <Services />
+      <Services />
+      <div className={s.projectsContainer}>
+        <Projects />
       </div>
+      <Contacts />
     </div>
   )
 }

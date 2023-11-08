@@ -1,5 +1,5 @@
-import { ProjectType } from '@/app/projects/page'
 import { Typography } from '@/common/components/typography/typography'
+import { ProjectType } from '@/components/projects/projects'
 import Image from 'next/image'
 
 import s from './projectCard.module.scss'
@@ -14,9 +14,11 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
       <div className={s.imageWrapper}>
         <Image alt={project.alt} className={s.image} placeholder={'blur'} src={project.img} />
       </div>
-      <Typography className={s.title} variant={'h3'}>
-        {project.title}
-      </Typography>
+      {project.title !== '' && (
+        <Typography className={s.title} variant={'subtitle2'}>
+          {project.title}
+        </Typography>
+      )}
     </div>
   )
 }

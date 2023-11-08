@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutContainer {
+  flex-direction: row;
+  gap: 60px;
+}
+
+.photo {
+  width: auto;
+  max-height: 300px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
