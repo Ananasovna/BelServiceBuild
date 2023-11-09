@@ -1,12 +1,23 @@
+.contactsContainer {
+  flex-direction: row;
+  max-width: 900px;
+}
+
 .contactsWrapper {
   display: flex;
+  flex-direction: column;
   gap: 30px;
-  width: 100%;
+  width: 40%;
 }
 
 .contactsLinks {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 70%;
+}
+
+.formWrapper {
+  display: flex;
+  width: 50%;
+  height: 100%;
 }
