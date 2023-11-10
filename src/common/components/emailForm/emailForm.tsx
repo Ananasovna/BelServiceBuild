@@ -7,6 +7,7 @@ import { Button } from '@/common/components/button/button'
 import { Typography } from '@/common/components/typography/typography'
 import yellowBg from '@/../public/image/yellowBg.webp'
 import { clsx } from 'clsx'
+import { myAction } from '@/app/api/action'
 
 export const EmailForm = () => {
   const formik = useFormik({
@@ -14,13 +15,6 @@ export const EmailForm = () => {
     onSubmit: (values, { resetForm, setSubmitting }) => {
       resetForm()
       setSubmitting(false)
-      axios({
-        data: values,
-        method: 'post',
-        url: 'https://server-send-message.herokuapp.com/sendMessage',
-      }).then(() => {
-        alert('Сообщение отправилось')
-      })
     },
     validationSchema: Yup.object({
       message: Yup.string().required('Введите текст письма'),
@@ -31,27 +25,37 @@ export const EmailForm = () => {
     }),
   })
 
+  const handleSubmit = () => {
+    formik.resetForm()
+    formik.setSubmitting(false)
+  }
+
   const formClass = clsx({ background: '#000' }, s.formContainer)
 
   return (
     <div className={s.wrapper}>
       <FormikProvider value={formik}>
-        <form className={formClass}>
-          <Field className={s.field} name={'name'} placeholder={'Ваше имя'} type={'text'} />
+        <form action={myAction} onSubmit={handleSubmit} className={formClass}>
           <Field
             className={s.field}
-            name={'email'}
+            placeholder={'Ваше имя'}
+            type={'text'}
+            {...formik.getFieldProps('name')}
+          />
+          <Field
+            className={s.field}
             placeholder={'Ваш почтовый адрес'}
             type={'email'}
+            {...formik.getFieldProps('email')}
           />
           <Field
             className={s.textfield}
             as={'textarea'}
-            name={'message'}
             placeholder={'Текст письма'}
+            {...formik.getFieldProps('message')}
           />
 
-          <Button variant={'secondary'} disabled={formik.isSubmitting} type={'submit'}>
+          <Button type={'submit'} variant={'secondary'} disabled={formik.isSubmitting}>
             Напишите нам
           </Button>
         </form>
