@@ -6,8 +6,8 @@ const smtpTransport = mailer.createTransport(
     port: 465,
     secure: true,
     auth: {
-      user: process.env.NODEMAILER_EMAIL,
-      pass: process.env.NODEMAILER_PASSWORD,
+      user: process.env.NEXT_PUBLIC_NODEMAILER_EMAIL,
+      pass: process.env.NEXT_PUBLIC_NODEMAILER_PASSWORD,
     },
     tls: { rejectUnauthorized: false },
   },
