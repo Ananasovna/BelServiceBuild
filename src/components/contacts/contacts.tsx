@@ -9,7 +9,6 @@ import { Typography } from '@/common/components/typography/typography'
 import s from './contacts.module.scss'
 
 export const Contacts = () => {
-  console.log('render')
   return (
     <Container className={s.contactsContainer}>
       <div className={s.contactsWrapper}>
