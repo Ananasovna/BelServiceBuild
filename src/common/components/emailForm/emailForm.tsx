@@ -33,7 +33,7 @@ export const EmailForm = () => {
   return (
     <div className={s.wrapper}>
       <FormikProvider value={formik}>
-        <form action={myAction} className={formClass} onSubmit={handleSubmit}>
+        <form action={myAction} className={s.formContainer} onSubmit={handleSubmit}>
           <Field
             className={s.field}
             placeholder={'Ваше имя'}
