@@ -22,23 +22,36 @@
 }
 
 .field {
-  flex-grow: 1;
 }
 
 .textfield {
   resize: none;
-  flex-grow: 3;
-  width: 100%;
-  height: 60%;
 }
 
 .field,
 .textfield {
+  width: 100%;
+  height: 100%;
   padding: 5px 10px;
+
   font-family: var(--font-family-primary);
+
   border: none;
 
   &:focus {
     outline: none;
   }
+}
+
+.fieldWrapper {
+  position: relative;
+  flex-grow: 1;
+  height: 40px;
+}
+
+.textfieldWrapper {
+  position: relative;
+  flex-grow: 3;
+  width: 100%;
+  height: 60%;
 }

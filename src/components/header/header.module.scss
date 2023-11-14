@@ -1,22 +1,51 @@
-.header {
-  //position: fixed;
-  //z-index: 2;
-
-  display: flex;
-  justify-content: center;
-
-  width: 100vw;
-  height: 120px;
-
+.appBar {
+  position: fixed;
+  height: 7vw;
   background: var(--color-light-100);
-  box-shadow: 0 1px 10px 1px rgb(0 0 0 / 20%);
 }
 
 .headerContainer {
   flex-direction: row;
-  justify-content: space-between;
-
   width: 100vw;
   height: 100%;
   padding: 0;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+  height: 100%;
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  text-transform: capitalize;
+
+  border-radius: unset;
+
+  transition: none;
+
+  &:hover {
+    background: var(--color-accent-300);
+  }
+
+  &:active {
+    animation: none;
+  }
+}
+
+.MuiMenu-paper {
+  background: var(--color-light-300) !important;
 }

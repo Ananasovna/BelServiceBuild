@@ -1,10 +1,16 @@
 'use server'
 import sendEmail from '@/lib/mail'
 
-export async function myAction(data: any) {
-  const name = data.get('name')
-  const email = data.get('email')
-  const messageText = data.get('message')
+export type ValuesType = {
+  email: string
+  message: string
+  name: string
+}
+
+export async function myAction(data: ValuesType) {
+  const name = data.name
+  const email = data.email
+  const messageText = data.message
   const message = {
     subject: `Письмо с сайта BelServiceBuild от ${name}`,
     text: `

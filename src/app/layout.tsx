@@ -18,6 +18,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link color={'#5bbad5'} href={'/favicon/safari-pinned-tab.svg'} rel={'mask-icon'} />
         <meta content={'#da532c'} name={'msapplication-TileColor'} />
         <meta content={'#ffffff'} name={'theme-color'} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <body className={'main'}>
         <Header />

@@ -9,6 +9,7 @@
   --color-dark-100: #4c4c4c;
   --color-dark-300: #171717;
   --color-dark-500: #000;
+  --color-warning-100: #f00f;
 
   /* Шрифт. Чтобы заменить основной шрифт нужно указать название нужного шрифта в строке ниже */
   --font-family-primary: 'Roboto', sans-serif;
@@ -60,4 +61,9 @@ a {
 
 .content {
   flex: 1 0 auto;
+  margin-top: 7vw;
+}
+
+.main {
+  height: 100%;
 }

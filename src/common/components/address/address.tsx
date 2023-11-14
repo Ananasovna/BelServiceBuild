@@ -12,19 +12,14 @@ export const Address = ({ height = '40px', width = '40px', withBg = false }: Con
 
   return (
     <div>
-      <Link
-        className={contactClass}
-        href={
-          'https://yandex.ru/maps/12/smolensk/house/ulitsa_nikolayeva_51/Z0sYdgVkQE0CQFtufXt2cXlrbA==/?ll=32.024985%2C54.770588&z=16'
-        }
-      >
+      <div className={contactClass}>
         <div className={s.iconWrapper}>
           <HouseIcon height={height} width={width} />
         </div>
         <Typography variant={'subtitle2'}>
           214013, Смоленская область, город Смоленск, ул. Николаева 51, офис А 49
         </Typography>
-      </Link>
+      </div>
     </div>
   )
 }
