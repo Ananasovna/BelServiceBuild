@@ -20,7 +20,9 @@ export const Telephone = ({ height = '20px', width = '20px', withBg = false }: C
         <div className={s.iconWrapper}>
           <TelephoneIcon height={height} width={width} />
         </div>
-        <Typography variant={'subtitle2'}>+7 (993) 563 51 54</Typography>
+        <Typography className={s.title} variant={'subtitle2'}>
+          +7 (993) 563 51 54
+        </Typography>
       </Link>
     </div>
   )
