@@ -20,7 +20,7 @@ import s from './services.module.scss'
 export const Services = ({ children }: ServicesProps) => {
   return (
     <Container>
-      <TitleContainer className={s.title} variant={'h1'}>
+      <TitleContainer className={s.title} variant={'h2'}>
         Услуги
       </TitleContainer>
 

@@ -22,7 +22,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </Head>
       <body className={'main'}>
         <Header />
-        <div className={'content'}>{children}</div>
+        <div className={'content'}>
+          <div className={'headerReplacer'}></div>
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

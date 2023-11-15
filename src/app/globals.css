@@ -59,9 +59,19 @@ a {
   text-decoration: none;
 }
 
+.headerReplacer {
+  display: flex;
+  width: 100vw;
+  height: 8vw;
+  background: red;
+
+  @media (width >= 1280px) {
+    height: 110px;
+  }
+}
+
 .content {
   flex: 1 0 auto;
-  margin-top: 7vw;
 }
 
 .main {

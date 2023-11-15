@@ -19,7 +19,7 @@ export const LinksServices = () => {
             src={renovation}
           />
         </div>
-        <Typography className={s.title} variant={'h2'}>
+        <Typography className={s.title} variant={'h3'}>
           Комплексный ремонт
         </Typography>
       </Link>
@@ -32,7 +32,7 @@ export const LinksServices = () => {
             src={service}
           />
         </div>
-        <Typography className={s.title} variant={'h2'}>
+        <Typography className={s.title} variant={'h3'}>
           Комплексное обслуживание
         </Typography>
       </Link>
@@ -45,7 +45,7 @@ export const LinksServices = () => {
             src={design}
           />
         </div>
-        <Typography className={s.title} variant={'h2'}>
+        <Typography className={s.title} variant={'h3'}>
           Проектирование
         </Typography>
       </Link>

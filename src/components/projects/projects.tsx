@@ -32,7 +32,7 @@ export const Projects = () => {
 
   return (
     <Container>
-      <TitleContainer className={s.title} variant={'h1'}>
+      <TitleContainer className={s.title} variant={'h2'}>
         Наши проекты
       </TitleContainer>
       <div className={s.projectsWrapper}>{mappedProjects}</div>
