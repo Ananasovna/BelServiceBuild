@@ -11,11 +11,11 @@ export type ContactsProps = {
   withBg?: boolean
 }
 
-export const Telephone = ({ height = '20px', width = '20px', withBg = false }: ContactsProps) => {
-  const contactClass = clsx(s.wrapper, withBg && s.withBg)
+export const Telephone = ({ height = '100%', width = 'auto', withBg = false }: ContactsProps) => {
+  const contactClass = clsx(s.wrapperLink, withBg && s.withBg)
 
   return (
-    <div>
+    <div className={s.wrapper}>
       <Link className={contactClass} href={'tel:+79935635154'}>
         <div className={s.iconWrapper}>
           <TelephoneIcon height={height} width={width} />
