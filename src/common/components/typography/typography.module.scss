@@ -28,11 +28,11 @@
   @include typography(var(--font-size-xl), $line-height: var(--line-height-l));
 
   @media (width <= 768px) {
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-m);
   }
 
   @media (width <= 576px) {
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-s);
   }
 }
 

@@ -23,4 +23,8 @@
 
 .title {
   flex-wrap: nowrap;
+
+  @media (width <= 576px) {
+    display: none;
+  }
 }

@@ -50,12 +50,12 @@ export const Header = () => {
   }
 
   return (
-    <AppBar className={s.appBar}>
+    <AppBar classes={{}} className={s.appBar}>
       <Container className={s.headerContainer}>
         <Toolbar className={s.toolbar} disableGutters>
           <Logo />
           <Telephone />
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
