@@ -32,10 +32,8 @@ export const Projects = () => {
 
   return (
     <Container>
-      <TitleContainer>
-        <Typography className={s.title} variant={'h1'}>
-          Наши проекты
-        </Typography>
+      <TitleContainer className={s.title} variant={'h1'}>
+        Наши проекты
       </TitleContainer>
       <div className={s.projectsWrapper}>{mappedProjects}</div>
     </Container>

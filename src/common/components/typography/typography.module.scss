@@ -14,33 +14,82 @@
   @include typography(var(--font-size-xxl), $line-height: var(--line-height-l));
 
   text-transform: uppercase;
+
+  @media (width <= 768px) {
+    font-size: var(--font-size-xl);
+  }
+
+  @media (width <= 576px) {
+    font-size: var(--font-size-l);
+  }
 }
 
 .h1 {
   @include typography(var(--font-size-xl), $line-height: var(--line-height-l));
 
-  text-transform: uppercase;
+  @media (width <= 768px) {
+    font-size: var(--font-size-l);
+  }
+
+  @media (width <= 576px) {
+    font-size: var(--font-size-m);
+  }
 }
 
 .h2 {
   @include typography(var(--font-size-xl));
+
+  text-transform: uppercase;
+
+  @media (width <= 768px) {
+    font-size: var(--font-size-l);
+  }
+
+  @media (width <= 576px) {
+    font-size: var(--font-size-m);
+  }
 }
 
 .h3,
 .subtitle1 {
   @include typography;
+
+  @media (width <= 768px) {
+    font-size: var(--font-size-m);
+  }
+
+  @media (width <= 576px) {
+    font-size: var(--font-size-s);
+  }
 }
 
 .body1 {
   @include typography(var(--font-size-m), var(--font-weight-regular));
+
+  @media (width <= 768px) {
+    font-size: var(--font-size-s);
+  }
+
+  @media (width <= 576px) {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-s);
+  }
 }
 
 .body2 {
   @include typography(var(--font-size-s), var(--font-weight-regular));
+
+  @media (width <= 768px) {
+    font-size: var(--font-size-xs);
+  }
 }
 
 .subtitle2 {
   @include typography(var(--font-size-s));
+
+  @media (width <= 768px) {
+    font-size: var(--font-size-xs);
+  }
 }
 
 .link1 {

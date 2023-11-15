@@ -12,10 +12,8 @@ export const About = () => {
       <Image alt={'Фото компании'} className={s.photo} src={logo} />
 
       <div className={s.wrapper}>
-        <TitleContainer align={'left'}>
-          <Typography className={s.title} variant={'h1'}>
-            О нас
-          </Typography>
+        <TitleContainer className={s.title} variant={'h2'} align={'left'}>
+          О нас
         </TitleContainer>
         <Typography className={s.text1} variant={'body1'}>
           Наша компания оказывает профессиональные услуги{' '}

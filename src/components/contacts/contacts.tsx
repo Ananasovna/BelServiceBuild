@@ -16,8 +16,8 @@ export const Contacts = () => {
       </div>
 
       <div className={s.contactsWrapper}>
-        <TitleContainer align={'left'}>
-          <Typography variant={'h1'}>Контакты</Typography>
+        <TitleContainer variant={'h2'} align={'left'}>
+          Контакты
         </TitleContainer>
         <div className={s.contactsLinks}>
           <Telephone height={'40px'} width={'40px'} withBg />

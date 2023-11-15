@@ -10,7 +10,7 @@ export const Logo = () => {
   return (
     <Link className={s.logoWrapper} href={'/'}>
       <Image alt={'Логотип компании'} className={s.logo} src={logo} />
-      <Typography variant={'h2'}>BelServiceBuild</Typography>
+      <Typography variant={'h1'}>BelServiceBuild</Typography>
     </Link>
   )
 }
