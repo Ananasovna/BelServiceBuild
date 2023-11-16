@@ -1,4 +1,9 @@
 .wrapper {
+  min-width: 177px;
+
+  @media (width <= 576px) {
+    min-width: unset;
+  }
 }
 
 .wrapperLink {
@@ -22,7 +27,7 @@
 }
 
 .title {
-  flex-wrap: nowrap;
+  min-width: 133px;
 
   @media (width <= 576px) {
     display: none;
