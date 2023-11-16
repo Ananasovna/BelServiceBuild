@@ -7,11 +7,10 @@
   justify-content: center;
 
   max-width: 1200px;
-  height: 100%;
   margin: auto;
   padding: 3% 4%;
 
   @media (width <= 768px) {
-    gap: 10px;
+    gap: 20px;
   }
 }

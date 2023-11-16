@@ -1,6 +1,7 @@
 .contactsContainer {
   flex-direction: row;
   max-width: 900px;
+  height: auto;
 }
 
 .contactsWrapper {
@@ -19,5 +20,5 @@
 .formWrapper {
   display: flex;
   width: 50%;
-  height: 319px;
+  height: 100%;
 }

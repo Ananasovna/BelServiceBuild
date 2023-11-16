@@ -1,4 +1,10 @@
 .projectsWrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
+
+  @media (width <= 768px) {
+    gap: 15px;
+  }
 }

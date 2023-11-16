@@ -2,7 +2,6 @@
 import { myAction } from '@/app/api/action'
 import { Button } from '@/common/components/button/button'
 import { ErrorCloud } from '@/common/components/emailForm/ErrorCloud'
-import { clsx } from 'clsx'
 import { Field, FormikProvider, useFormik } from 'formik'
 import * as Yup from 'yup'
 
