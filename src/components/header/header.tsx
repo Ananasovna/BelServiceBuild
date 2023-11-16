@@ -51,7 +51,7 @@ export const Header = () => {
   }
 
   return (
-    <AppBar classes={{}} className={s.appBar}>
+    <AppBar style={{ background: '#fff' }} className={clsx(s.appBar, s.MuiPaperRoot)}>
       <Container className={s.headerContainer}>
         <Toolbar className={s.toolbar} disableGutters>
           <Logo />

@@ -1,7 +1,12 @@
+.MuiPaper-root {
+  background: var(--color-light-100);
+}
+
 .appBar {
   position: fixed;
   height: 8vw;
-  background: var(--color-light-100);
+
+  //background: var(--color-light-100);
 
   @media (width <= 768px) {
     height: 11%;
