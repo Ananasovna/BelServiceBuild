@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
   justify-content: center;
 
   width: 100%;
@@ -16,6 +15,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  align-items: stretch;
   justify-content: center;
 
   height: 100%;
@@ -26,7 +26,6 @@
 
 .textfield {
   resize: none;
-  height: 100%;
 }
 
 .field,
@@ -52,7 +51,15 @@
 
 .textfieldWrapper {
   position: relative;
-  flex-grow: 3;
+  flex-grow: 1;
   width: 100%;
   height: 60%;
+
+  @media (width <= 768px) {
+    height: 40%;
+  }
+}
+
+.buttonWrapper {
+  flex-grow: 0;
 }

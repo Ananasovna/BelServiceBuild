@@ -58,14 +58,16 @@ export const EmailForm = () => {
             />
           </div>
 
-          <Button
-            disabled={formik.isSubmitting || Object.keys(formik.errors).length !== 0}
-            onClick={() => formik.validateForm()}
-            type={'submit'}
-            variant={'secondary'}
-          >
-            Напишите нам
-          </Button>
+          <div className={s.buttonWrapper}>
+            <Button
+              disabled={formik.isSubmitting || Object.keys(formik.errors).length !== 0}
+              onClick={() => formik.validateForm()}
+              type={'submit'}
+              variant={'secondary'}
+            >
+              Напишите нам
+            </Button>
+          </div>
         </form>
       </FormikProvider>
     </div>
