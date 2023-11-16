@@ -94,6 +94,7 @@ export const Header = () => {
                       aria-expanded={open ? 'true' : undefined}
                       onClick={handleClick}
                       className={s.menuButton}
+                      style={{ textTransform: 'capitalize', width: '100%', height: '100%' }}
                     >
                       <NavItem key={page.id} navItem={page} />
                     </Button>
