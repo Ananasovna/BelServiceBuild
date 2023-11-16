@@ -13,4 +13,8 @@
     justify-content: space-around;
     height: fit-content;
   }
+
+  @media (width <= 576px) {
+    max-width: 410px;
+  }
 }

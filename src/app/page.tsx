@@ -6,6 +6,12 @@ import { Projects } from '@/components/projects/projects'
 import { Services } from '@/components/services/services'
 
 import s from './page.module.css'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Коммерческий ремонт',
+  description: '',
+}
 
 export default function Page() {
   return (

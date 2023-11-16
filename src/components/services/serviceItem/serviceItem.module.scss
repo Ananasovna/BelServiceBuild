@@ -1,10 +1,15 @@
 .wrapper {
   display: flex;
   gap: 3%;
+  justify-content: space-between;
   width: 350px;
 
   @media (width <= 768px) {
     align-items: center;
+  }
+
+  @media (width <= 576px) {
+    width: 260px;
   }
 }
 
