@@ -9,6 +9,7 @@ import s from './header.module.scss'
 import { AppBar, Box, Button, IconButton, Menu, Toolbar } from '@mui/material'
 import { MouseEvent, useState } from 'react'
 import { NavItem } from '@/components/navbar/navItem'
+import { clsx } from 'clsx'
 
 export type NavItemType = {
   id: number
@@ -104,7 +105,7 @@ export const Header = () => {
             </Menu>
           </Box>
           <Box
-            className={s.box}
+            className={clsx(s.box, s.navbar)}
             sx={{
               display: { xs: 'none', md: 'flex' },
             }}

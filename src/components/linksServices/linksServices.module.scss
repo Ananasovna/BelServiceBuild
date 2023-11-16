@@ -1,6 +1,10 @@
 .wrapper {
   display: flex;
   width: 100%;
+
+  @media (width <= 480px) {
+    flex-direction: column;
+  }
 }
 
 .linkContainer {
@@ -11,6 +15,11 @@
   justify-content: center;
 
   background: rgb(0 0 0 / 50%);
+
+  @media (width <= 480px) {
+    width: auto;
+    height: 100px;
+  }
 }
 
 .photoWrapper {
