@@ -17,9 +17,9 @@
 .text2 {
   text-align: justify;
 
-  //@media (width <= 480px) {
-  //  text-align: unset;
-  //}
+  @media (width <= 480px) {
+    text-align: unset;
+  }
 }
 
 .photo {

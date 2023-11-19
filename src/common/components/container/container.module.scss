@@ -13,4 +13,8 @@
   @media (width <= 768px) {
     gap: 20px;
   }
+
+  @media (width <= 480px) {
+    padding: 15px;
+  }
 }
