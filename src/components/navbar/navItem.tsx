@@ -11,12 +11,13 @@ import s from '@/components/navbar/navItem.module.scss'
 type NavItemProps = {
   navItem: NavItemType
   onClick?: () => void
+  className?: string
 }
 
-export const NavItem = ({ navItem, onClick }: NavItemProps) => {
+export const NavItem = ({ navItem, onClick, className }: NavItemProps) => {
   const pathname = usePathname()
 
-  const activeClass = clsx(pathname === navItem.path && s.activeLink)
+  const activeClass = clsx(className, pathname === navItem.path && s.activeLink)
 
   return (
     <Link onClick={onClick} className={clsx(s.navItem, activeClass)} href={navItem.path}>

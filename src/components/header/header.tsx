@@ -101,7 +101,7 @@ export const Header = () => {
                         padding: 0,
                       }}
                     >
-                      <NavItem key={page.id} navItem={page} />
+                      <NavItem className={s.buttonWrapper} key={page.id} navItem={page} />
                     </Button>
                   </div>
                 ) : (
