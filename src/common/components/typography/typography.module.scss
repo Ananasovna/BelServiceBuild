@@ -66,12 +66,16 @@
 .body1 {
   @include typography(var(--font-size-m), var(--font-weight-regular));
 
+  line-height: var(--line-height-l);
+
   @media (width <= 768px) {
     font-size: var(--font-size-s);
+    line-height: var(--line-height-m);
   }
 
   @media (width <= 576px) {
     font-size: var(--font-size-s);
+    line-height: var(--line-height-m);
   }
 }
 

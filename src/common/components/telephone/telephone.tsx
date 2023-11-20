@@ -9,10 +9,18 @@ export type ContactsProps = {
   height?: string
   width?: string
   withBg?: boolean
+  className?: string
 }
 
-export const Telephone = ({ height = '100%', width = 'auto', withBg = false }: ContactsProps) => {
+export const Telephone = ({
+  height = '100%',
+  width = 'auto',
+  withBg = false,
+  className,
+}: ContactsProps) => {
   const contactClass = clsx(s.wrapperLink, withBg && s.withBg)
+
+  const titleClass = clsx(s.title, className)
 
   return (
     <div className={s.wrapper}>
@@ -20,7 +28,7 @@ export const Telephone = ({ height = '100%', width = 'auto', withBg = false }: C
         <div className={s.iconWrapper}>
           <TelephoneIcon height={height} width={width} />
         </div>
-        <Typography className={s.title} variant={'subtitle2'}>
+        <Typography className={titleClass} variant={'subtitle2'}>
           +7 (993) 563 51 54
         </Typography>
       </Link>

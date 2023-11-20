@@ -10,7 +10,7 @@ import s from './emailForm.module.scss'
 export const EmailForm = () => {
   const formik = useFormik({
     initialValues: { email: '', message: '', name: '' },
-    onSubmit: (values, { resetForm, setSubmitting }) => {},
+    onSubmit: () => {},
     validationSchema: Yup.object({
       email: Yup.string()
         .email('Некорректный адрес электронной почты')

@@ -1,4 +1,4 @@
-.contactsContainer {
+div.contactsContainer {
   flex-direction: row;
   align-items: stretch;
   max-width: 900px;
@@ -16,7 +16,12 @@
   gap: 30px;
 
   width: 40%;
-  min-width: 210px;
+  min-width: 232px;
+
+  @media (width <= 576px) {
+    align-self: center;
+    width: 80%;
+  }
 }
 
 .contactsLinks {
@@ -28,4 +33,9 @@
 .formWrapper {
   display: flex;
   width: 60%;
+
+  @media (width <= 576px) {
+    align-self: center;
+    width: 80%;
+  }
 }

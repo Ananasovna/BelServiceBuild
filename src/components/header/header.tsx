@@ -55,7 +55,7 @@ export const Header = () => {
       <Container className={s.headerContainer}>
         <Toolbar className={s.toolbar} disableGutters>
           <Logo />
-          <Telephone />
+          <Telephone className={s.telephoneTitle} />
           <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"

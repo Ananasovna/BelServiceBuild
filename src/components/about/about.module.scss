@@ -1,7 +1,6 @@
-.aboutContainer {
+div.aboutContainer {
   flex-flow: row wrap;
   gap: 20px;
-  align-items: flex-start;
 
   @media (width >= 380px) and (width <= 455px) {
     padding: 15px 60px;
@@ -20,10 +19,6 @@
 .text1,
 .text2 {
   text-align: justify;
-
-  @media (width <= 480px) {
-    //text-align: unset;
-  }
 }
 
 .photo {

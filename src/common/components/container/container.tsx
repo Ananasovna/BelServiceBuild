@@ -12,7 +12,7 @@ type ContainerProps = {
 }
 
 export const Container = ({ children, className }: ContainerProps) => {
-  const containerClass = clsx(className, s.container)
+  const containerClass = clsx(s.container, className)
 
   return <div className={containerClass}>{children}</div>
 }

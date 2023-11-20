@@ -1,10 +1,18 @@
 .projectsWrapper {
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
 
+  height: 310px;
+
   @media (width <= 768px) {
     gap: 15px;
+    height: 200px;
   }
+}
+
+.showAll {
+  height: 100%;
 }
