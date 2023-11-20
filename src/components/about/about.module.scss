@@ -2,6 +2,10 @@
   flex-flow: row wrap;
   gap: 20px;
   align-items: flex-start;
+
+  @media (width >= 380px) and (width <= 455px) {
+    padding: 15px 60px;
+  }
 }
 
 .wrapper {
@@ -18,7 +22,7 @@
   text-align: justify;
 
   @media (width <= 480px) {
-    text-align: unset;
+    //text-align: unset;
   }
 }
 

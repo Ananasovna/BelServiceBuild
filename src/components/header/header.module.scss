@@ -6,8 +6,6 @@
   position: fixed;
   height: 8vw;
 
-  //background: var(--color-light-100);
-
   @media (width <= 768px) {
     height: 11%;
   }
@@ -58,4 +56,11 @@
 
 .navbar {
   min-width: 425px;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
 }

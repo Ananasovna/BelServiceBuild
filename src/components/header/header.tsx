@@ -86,7 +86,7 @@ export const Header = () => {
             >
               {pages.map(page =>
                 page.title === 'Услуги' ? (
-                  <div>
+                  <div className={s.navButton}>
                     <Button
                       id="basic-button"
                       aria-controls={open ? 'basic-menu' : undefined}
@@ -101,11 +101,11 @@ export const Header = () => {
                         padding: 0,
                       }}
                     >
-                      <NavItem key={page.id} navItem={page} />
+                      <NavItem className={s.navButton} key={page.id} navItem={page} />
                     </Button>
                   </div>
                 ) : (
-                  <NavItem key={page.id} navItem={page} />
+                  <NavItem className={s.navButton} key={page.id} navItem={page} />
                 )
               )}
             </Menu>
@@ -133,7 +133,7 @@ export const Header = () => {
                       padding: 0,
                     }}
                   >
-                    <NavItem key={page.id} navItem={page} />
+                    <NavItem className={s.navButton} key={page.id} navItem={page} />
                   </Button>
                   <Menu
                     id="basic-menu"
@@ -154,7 +154,12 @@ export const Header = () => {
                     classes={s}
                   >
                     {services.map(page => (
-                      <NavItem key={page.id} onClick={handleClose} navItem={page} />
+                      <NavItem
+                        className={s.navButton}
+                        key={page.id}
+                        onClick={handleClose}
+                        navItem={page}
+                      />
                     ))}
                   </Menu>
                 </div>
