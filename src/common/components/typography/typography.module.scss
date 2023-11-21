@@ -74,6 +74,7 @@
   @media (width <= 576px) {
     font-size: var(--font-size-xs);
     line-height: var(--line-height-m);
+    letter-spacing: unset;
   }
 }
 
