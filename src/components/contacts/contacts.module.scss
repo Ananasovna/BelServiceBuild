@@ -1,7 +1,7 @@
 div.contactsContainer {
   flex-direction: row;
   align-items: stretch;
-  max-width: 900px;
+  max-width: 1100px;
   height: auto;
 
   @media (width <= 576px) {
@@ -15,7 +15,7 @@ div.contactsContainer {
   flex-direction: column;
   gap: 20px;
 
-  width: 40%;
+  width: 50%;
   min-width: 232px;
 
   @media (width <= 576px) {
@@ -32,7 +32,7 @@ div.contactsContainer {
 
 .formWrapper {
   display: flex;
-  width: 60%;
+  width: 50%;
 
   @media (width <= 576px) {
     align-self: center;
@@ -41,6 +41,22 @@ div.contactsContainer {
 }
 
 .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   padding: 10px;
+
+  background: var(--color-light-300);
+}
+
+.telWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding-left: 10px;
+
   background: var(--color-light-300);
 }

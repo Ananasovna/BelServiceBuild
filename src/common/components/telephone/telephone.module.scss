@@ -1,22 +1,10 @@
 .wrapper {
-  min-width: 196px;
-
-  @media (width <= 576px) {
-    min-width: unset;
-  }
-
-  @media (width >= 900px) and (width <= 1027px) {
-    min-width: unset;
-  }
 }
 
 .wrapperLink {
   display: flex;
   gap: 10px;
   align-items: center;
-
-  min-height: 60px;
-  padding: 10px;
 }
 
 .withBg {

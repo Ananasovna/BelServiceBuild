@@ -11,6 +11,9 @@ import s from './contacts.module.scss'
 export const Contacts = () => {
   return (
     <Container className={s.contactsContainer}>
+      <div className={s.formWrapper}>
+        <EmailForm />
+      </div>
       <div className={s.contactsWrapper}>
         <TitleContainer variant={'h2'} align={'left'}>
           Контакты
@@ -19,15 +22,14 @@ export const Contacts = () => {
         <div className={s.contactsLinks}>
           <div className={s.info}>
             <Typography variant={'subtitle2'}>ООО "БелСервисСтрой"</Typography>
-            <Typography variant={'subtitle2'}>ИНН: 6700007034</Typography>
+            <Telephone height={'20px'} width={'20px'} />
           </div>
-          <Telephone height={'40px'} width={'40px'} withBg />
-          <Email height={'50px'} width={'50px'} withBg />
-          <Address height={'50px'} width={'50px'} withBg />
+          <div className={s.telWrapper}>
+            <Typography variant={'subtitle2'}>ИНН: 6700007034</Typography>
+            <Email height={'30px'} width={'30px'} withBg />
+          </div>
+          <Address height={'30px'} width={'30px'} withBg />
         </div>
-      </div>
-      <div className={s.formWrapper}>
-        <EmailForm />
       </div>
     </Container>
   )
