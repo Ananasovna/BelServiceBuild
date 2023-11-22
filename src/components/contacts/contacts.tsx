@@ -18,17 +18,16 @@ export const Contacts = () => {
         <TitleContainer variant={'h2'} align={'left'}>
           Контакты
         </TitleContainer>
-
         <div className={s.contactsLinks}>
-          <div className={s.info}>
-            <Typography variant={'subtitle2'}>ООО "БелСервисСтрой"</Typography>
-            <Telephone height={'20px'} width={'20px'} />
-          </div>
           <div className={s.telWrapper}>
-            <Typography variant={'subtitle2'}>ИНН: 6700007034</Typography>
+            <Telephone height={'20px'} width={'20px'} />
             <Email height={'30px'} width={'30px'} withBg />
           </div>
           <Address height={'30px'} width={'30px'} withBg />
+          <div className={s.info}>
+            <Typography variant={'subtitle2'}>ООО "БелСервисСтрой"</Typography>
+            <Typography variant={'subtitle2'}>ИНН: 6700007034</Typography>
+          </div>
         </div>
       </div>
     </Container>

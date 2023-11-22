@@ -4,8 +4,9 @@ div.contactsContainer {
   max-width: 1100px;
   height: auto;
 
-  @media (width <= 576px) {
-    flex-direction: column;
+  @media (width <= 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
     justify-content: center;
   }
 }
@@ -16,11 +17,12 @@ div.contactsContainer {
   gap: 20px;
 
   width: 50%;
-  min-width: 232px;
+  min-width: 396px;
 
   @media (width <= 576px) {
     align-self: center;
     width: 80%;
+    min-width: unset;
   }
 }
 
@@ -34,7 +36,7 @@ div.contactsContainer {
   display: flex;
   width: 50%;
 
-  @media (width <= 576px) {
+  @media (width <= 768px) {
     align-self: center;
     width: 80%;
   }
@@ -42,6 +44,8 @@ div.contactsContainer {
 
 .info {
   display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
   align-items: center;
   justify-content: space-between;
 
@@ -52,11 +56,13 @@ div.contactsContainer {
 
 .telWrapper {
   display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
   align-items: center;
   justify-content: space-between;
 
   width: 100%;
-  padding-left: 10px;
+  padding: 10px;
 
   background: var(--color-light-300);
 }

@@ -50,19 +50,20 @@
 
 .secondary {
   color: var(--color-dark-500);
-  background-color: var(--color-light-300);
+  background-color: var(--color-light-500);
 
   &:hover {
-    background-color: var(--color-dark-300);
+    background-color: var(--color-accent-100);
   }
 
   &:active {
-    background-color: var(--color-dark-100);
+    background-color: var(--color-accent-500);
   }
 
   &:disabled {
     cursor: unset;
-    background-color: var(--color-dark-100);
+    color: var(--color-dark-100);
+    background-color: var(--color-accent-500);
   }
 }
 
