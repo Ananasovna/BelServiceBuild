@@ -5,10 +5,6 @@ div.aboutContainer {
   justify-content: center;
 
   max-width: 1200px;
-
-  @media (width >= 380px) and (width <= 455px) {
-    padding: 15px 50px;
-  }
 }
 
 .wrapper {
@@ -18,6 +14,10 @@ div.aboutContainer {
   gap: 20px;
 
   width: 73%;
+
+  @media (width <= 768px) {
+    width: 100%;
+  }
 }
 
 .text1,
@@ -26,9 +26,15 @@ div.aboutContainer {
 }
 
 .photoWrapper {
-  flex-grow: 1;
   width: auto;
   height: 320px;
+
+  @media (width <= 768px) {
+    align-self: center;
+    width: 60%;
+    max-width: 300px;
+    height: auto;
+  }
 }
 
 .photo {
@@ -36,7 +42,8 @@ div.aboutContainer {
   height: 100%;
 
   @media (width <= 768px) {
-    width: 40%;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -55,6 +62,11 @@ div.aboutContainer {
   flex-grow: 1;
   gap: 10px;
   width: fit-content;
+
+  @media (width <= 768px) {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
 }
 
 .text2 {
