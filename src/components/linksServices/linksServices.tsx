@@ -10,7 +10,7 @@ import s from './linksServices.module.scss'
 export const LinksServices = () => {
   return (
     <div className={s.wrapper}>
-      <Link className={s.linkContainer} href={'/services/renovation'}>
+      <Link className={s.linkContainer} href={'/renovation'}>
         <div className={s.photoWrapper}>
           <Image
             alt={'Изображение ремонта'}
@@ -23,7 +23,7 @@ export const LinksServices = () => {
           Комплексный ремонт
         </Typography>
       </Link>
-      <Link className={s.linkContainer} href={'/services/maintenance'}>
+      <Link className={s.linkContainer} href={'/maintenance'}>
         <div className={s.photoWrapper}>
           <Image
             alt={'Изображение обслуживания'}
@@ -36,7 +36,7 @@ export const LinksServices = () => {
           Комплексное обслуживание
         </Typography>
       </Link>
-      <Link className={s.linkContainer} href={'/services/design'}>
+      <Link className={s.linkContainer} href={'/design'}>
         <div className={s.photoWrapper}>
           <Image
             alt={'Изображение проектирования'}
