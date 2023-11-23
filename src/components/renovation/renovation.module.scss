@@ -1,3 +1,16 @@
+.bg {
+  background: no-repeat url('../../../public/image/logoBelka-grayScale.jpg') center/ 40% auto;
+
+  @media (width <= 768px) {
+    background: no-repeat url('../../../public/image/logoBelka-grayScale.jpg') center/ 60% auto;
+  }
+
+  @media (width <= 480px) {
+    background: no-repeat url('../../../public/image/logoBelka-grayScale.jpg') center/ 80% auto;
+  }
+}
+
+.bg,
 .textWrapper {
   display: flex;
   flex-direction: column;
@@ -5,10 +18,86 @@
   text-align: justify;
 }
 
+.textWrapper {
+  background: rgb(255 255 255 / 80%);
+}
+
+.iconTextBlock {
+  display: flex;
+
+  @media (width <= 768px) {
+    flex-wrap: wrap;
+  }
+}
+
+.iconWrapperBig {
+  display: block;
+  flex-grow: 1;
+
+  width: 30%;
+  min-width: 144px;
+  height: 100%;
+
+  @media (width <= 769px) {
+    display: none;
+  }
+}
+
+.iconWrapperSmall {
+  display: none;
+
+  @media (width <= 768px) {
+    display: flex;
+    width: 20%;
+  }
+
+  @media (width <= 576px) {
+    width: 30%;
+  }
+}
+
+.text1 {
+  @media (width <= 768px) {
+    width: 80%;
+  }
+
+  @media (width <= 576px) {
+    width: 70%;
+  }
+
+  @media (width <= 480px) {
+    width: 100%;
+  }
+}
+
+.text2 {
+  @media (width <= 768px) {
+    width: 100%;
+  }
+}
+
+.textWithIcon {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+
+  @media (width <= 768px) {
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+
+  @media (width <= 480px) {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
 .listWrapper {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  text-align: left;
 }
 
 .list {
