@@ -2,50 +2,55 @@
   width: 100vw;
   height: 110px;
   background: var(--color-light-900);
+
+  @media (width <= 1280px) {
+    height: 90px;
+  }
+
+  @media (width <= 768px) {
+    height: 70px;
+  }
+
+  @media (width <= 480px) {
+    height: 50px;
+  }
 }
 
-div.footerContainer {
+.footerContainer {
   align-items: center;
   justify-content: center;
   height: 100%;
 }
 
-.toolbar {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-}
-
-div.title {
+.footerTitle {
   font-size: 5rem;
   font-weight: 700;
   font-style: italic;
   color: var(--color-light-100);
   letter-spacing: 15px;
 
-  @media (width <= 950px) {
+  @media (width <= 1080px) {
     font-size: 4rem;
   }
 
-  @media (width <= 768px) {
+  @media (width <= 992px) {
     font-size: 3rem;
   }
 
-  @media (width <= 680px) {
+  @media (width <= 768px) {
     font-size: 2rem;
   }
 
-  @media (width <= 567px) {
+  @media (width <= 600px) {
     font-size: 1.5rem;
   }
 
-  @media (width <= 480px) {
+  @media (width <= 567px) {
     font-size: 1rem;
     letter-spacing: 10px;
   }
 
-  @media (width <= 300px) {
+  @media (width <= 400px) {
     font-size: 0.8rem;
     letter-spacing: 5px;
   }
