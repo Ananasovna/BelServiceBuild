@@ -10,6 +10,7 @@ import { AppBar, Box, Button, IconButton, Menu, Toolbar } from '@mui/material'
 import { MouseEvent, useState } from 'react'
 import { NavItem } from '@/components/navbar/navItem'
 import { clsx } from 'clsx'
+import { Navbar } from '@/components/navbar/navbar'
 
 export type NavItemType = {
   id: number
@@ -32,6 +33,8 @@ const services: NavItemType[] = [
 ]
 
 export const Header = () => {
+  const [isActive, setIsActive] = useState(false)
+
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
@@ -51,125 +54,133 @@ export const Header = () => {
   }
 
   return (
-    <AppBar style={{ background: '#fff' }} className={clsx(s.appBar, s.MuiPaperRoot)}>
+    <header className={s.appBar}>
       <Container className={s.headerContainer}>
-        <Toolbar className={s.toolbar} disableGutters>
-          <Logo />
-          <Telephone className={s.telephoneTitle} />
-          <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map(page =>
-                page.title === 'Услуги' ? (
-                  <div className={s.navButton}>
-                    <Button
-                      id="basic-button"
-                      aria-controls={open ? 'basic-menu' : undefined}
-                      aria-haspopup="true"
-                      aria-expanded={open ? 'true' : undefined}
-                      onClick={handleClick}
-                      className={s.menuButton}
-                      style={{
-                        textTransform: 'capitalize',
-                        width: '100%',
-                        height: '100%',
-                        padding: 0,
-                      }}
-                    >
-                      <NavItem className={s.navButton} key={page.id} navItem={page} />
-                    </Button>
-                  </div>
-                ) : (
-                  <NavItem className={s.navButton} key={page.id} navItem={page} />
-                )
-              )}
-            </Menu>
-          </Box>
-          <Box
-            className={clsx(s.box, s.navbar)}
-            sx={{
-              display: { xs: 'none', md: 'flex' },
-            }}
-          >
-            {pages.map(page =>
-              page.title === 'Услуги' ? (
-                <div>
-                  <Button
-                    id="basic-button"
-                    aria-controls={open ? 'basic-menu' : undefined}
-                    aria-haspopup="true"
-                    aria-expanded={open ? 'true' : undefined}
-                    onClick={handleClick}
-                    className={s.menuButton}
-                    style={{
-                      textTransform: 'capitalize',
-                      width: '100%',
-                      height: '100%',
-                      padding: 0,
-                    }}
-                  >
-                    <NavItem className={s.navButton} key={page.id} navItem={page} />
-                  </Button>
-                  <Menu
-                    id="basic-menu"
-                    anchorEl={anchorEl}
-                    open={open}
-                    onClose={handleClose}
-                    anchorOrigin={{
-                      vertical: 'top',
-                      horizontal: 'left',
-                    }}
-                    transformOrigin={{
-                      vertical: 'top',
-                      horizontal: 'left',
-                    }}
-                    MenuListProps={{
-                      'aria-labelledby': 'basic-button',
-                    }}
-                    classes={s}
-                  >
-                    {services.map(page => (
-                      <NavItem
-                        className={s.navButton}
-                        key={page.id}
-                        onClick={handleClose}
-                        navItem={page}
-                      />
-                    ))}
-                  </Menu>
-                </div>
-              ) : (
-                <NavItem key={page.id} navItem={page} />
-              )
-            )}
-          </Box>
-        </Toolbar>
+        <Logo />
+        <Telephone className={s.telephoneTitle} />
+        <Navbar isActive={isActive} setIsActive={setIsActive} />
       </Container>
-    </AppBar>
+    </header>
+
+    // <AppBar style={{ background: '#fff' }} className={clsx(s.appBar, s.MuiPaperRoot)}>
+    //   <Container className={s.headerContainer}>
+    //     <Toolbar className={s.toolbar} disableGutters>
+    //       <Logo />
+    //       <Telephone className={s.telephoneTitle} />
+    //       <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
+    //         <IconButton
+    //           size="large"
+    //           aria-label="account of current user"
+    //           aria-controls="menu-appbar"
+    //           aria-haspopup="true"
+    //           onClick={handleOpenNavMenu}
+    //         >
+    //           <MenuIcon />
+    //         </IconButton>
+    //         <Menu
+    //           id="menu-appbar"
+    //           anchorEl={anchorElNav}
+    //           anchorOrigin={{
+    //             vertical: 'bottom',
+    //             horizontal: 'left',
+    //           }}
+    //           keepMounted
+    //           transformOrigin={{
+    //             vertical: 'top',
+    //             horizontal: 'left',
+    //           }}
+    //           open={Boolean(anchorElNav)}
+    //           onClose={handleCloseNavMenu}
+    //           sx={{
+    //             display: { xs: 'block', md: 'none' },
+    //           }}
+    //         >
+    //           {pages.map(page =>
+    //             page.title === 'Услуги' ? (
+    //               <div className={s.navButton}>
+    //                 <Button
+    //                   id="basic-button"
+    //                   aria-controls={open ? 'basic-menu' : undefined}
+    //                   aria-haspopup="true"
+    //                   aria-expanded={open ? 'true' : undefined}
+    //                   onClick={handleClick}
+    //                   className={s.menuButton}
+    //                   style={{
+    //                     textTransform: 'capitalize',
+    //                     width: '100%',
+    //                     height: '100%',
+    //                     padding: 0,
+    //                   }}
+    //                 >
+    //                   <NavItem className={s.navButton} key={page.id} navItem={page} />
+    //                 </Button>
+    //               </div>
+    //             ) : (
+    //               <NavItem className={s.navButton} key={page.id} navItem={page} />
+    //             )
+    //           )}
+    //         </Menu>
+    //       </Box>
+    //       <Box
+    //         className={clsx(s.box, s.navbar)}
+    //         sx={{
+    //           display: { xs: 'none', md: 'flex' },
+    //         }}
+    //       >
+    //         {pages.map(page =>
+    //           page.title === 'Услуги' ? (
+    //             <div>
+    //               <Button
+    //                 id="basic-button"
+    //                 aria-controls={open ? 'basic-menu' : undefined}
+    //                 aria-haspopup="true"
+    //                 aria-expanded={open ? 'true' : undefined}
+    //                 onClick={handleClick}
+    //                 className={s.menuButton}
+    //                 style={{
+    //                   textTransform: 'capitalize',
+    //                   width: '100%',
+    //                   height: '100%',
+    //                   padding: 0,
+    //                 }}
+    //               >
+    //                 <NavItem className={s.navButton} key={page.id} navItem={page} />
+    //               </Button>
+    //               <Menu
+    //                 id="basic-menu"
+    //                 anchorEl={anchorEl}
+    //                 open={open}
+    //                 onClose={handleClose}
+    //                 anchorOrigin={{
+    //                   vertical: 'top',
+    //                   horizontal: 'left',
+    //                 }}
+    //                 transformOrigin={{
+    //                   vertical: 'top',
+    //                   horizontal: 'left',
+    //                 }}
+    //                 MenuListProps={{
+    //                   'aria-labelledby': 'basic-button',
+    //                 }}
+    //                 classes={s}
+    //               >
+    //                 {services.map(page => (
+    //                   <NavItem
+    //                     className={s.navButton}
+    //                     key={page.id}
+    //                     onClick={handleClose}
+    //                     navItem={page}
+    //                   />
+    //                 ))}
+    //               </Menu>
+    //             </div>
+    //           ) : (
+    //             <NavItem key={page.id} navItem={page} />
+    //           )
+    //         )}
+    //       </Box>
+    //     </Toolbar>
+    //   </Container>
+    // </AppBar>
   )
 }

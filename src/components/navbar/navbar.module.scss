@@ -1,10 +1,103 @@
-.wrapper {
+.wrapper,
+.nav {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.activeLink {
-  color: var(--color-light-100);
-  background: var(--color-accent-300);
+.wrapper {
+  position: relative;
+}
+
+.nav {
+  @media (width <= 930px) {
+    display: none;
+  }
+}
+
+.invisible {
+  display: none;
+}
+
+.navItemWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  min-height: 50px;
+
+  &:hover {
+    background: var(--color-accent-300);
+  }
+}
+
+.subMenu {
+  position: fixed;
+  top: 70px;
+  right: 4%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: fit-content;
+  height: fit-content;
+
+  background: var(--color-light-100);
+  border-radius: 3px;
+  box-shadow: 0 0 15px 2px rgb(0 0 0 / 30%);
+
+  @media (width >= 768px) {
+    top: 90px;
+  }
+
+  @media (width <= 768px) {
+    top: 70px;
+  }
+
+  @media (width <= 480px) {
+    top: 50px;
+    right: 15px;
+  }
+}
+
+.navMobile {
+  position: fixed;
+  top: 70px;
+  right: 4%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: fit-content;
+  height: fit-content;
+
+  background: var(--color-light-100);
+  border-radius: 3px;
+  box-shadow: 0 0 15px 2px rgb(0 0 0 / 30%);
+
+  @media (width >= 768px) {
+    top: 90px;
+  }
+
+  @media (width <= 768px) {
+    top: 70px;
+  }
+
+  @media (width <= 480px) {
+    top: 50px;
+    right: 15px;
+  }
+}
+
+.burgerMenu {
+  cursor: pointer;
+  display: none;
+
+  @media (width <= 930px) {
+    display: flex;
+  }
 }
