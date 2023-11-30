@@ -5,6 +5,7 @@ import s from './navbar.module.scss'
 import { clsx } from 'clsx'
 import { MenuIcon } from '@/common/icons/menuIcon'
 import { useState } from 'react'
+import { useOutsideClickRef } from 'rooks'
 
 export type NavItemType = {
   id: number
@@ -12,16 +13,16 @@ export type NavItemType = {
   title: string
 }
 
-type NavbarType = {
-  isActive: boolean
-  setIsActive: (value: boolean) => void
-}
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false)
   const [isSubMenu, setIsSubMenu] = useState<boolean>(false)
 
-  console.log(isActive)
-  console.log(isSubMenu)
+  const closeMenus = () => {
+    setIsSubMenu(false)
+    setIsActive(false)
+  }
+  const [ref] = useOutsideClickRef(closeMenus)
+
   const navigation: NavItemType[] = [
     { id: 1, path: '/', title: 'Главная' },
     { id: 2, path: '/about', title: 'О нас' },
@@ -38,11 +39,6 @@ export const Navbar = () => {
   ]
 
   const openSubMenu = () => setIsSubMenu(true)
-  const closeMenus = () => {
-    console.log('close menus')
-    setIsSubMenu(false)
-    setIsActive(false)
-  }
 
   const mappedSubMenu = services.map(el => (
     <div className={s.navItemWrapper}>
@@ -75,7 +71,9 @@ export const Navbar = () => {
       <div className={clsx(s.burgerMenu)} onClick={clickBtn}>
         <MenuIcon />
       </div>
-      <nav className={clsx(s.nav, isActive && s.navMobile)}>{mappedNavigation}</nav>
+      <nav ref={ref} className={clsx(s.nav, isActive && s.navMobile)}>
+        {mappedNavigation}
+      </nav>
     </div>
   )
 }
