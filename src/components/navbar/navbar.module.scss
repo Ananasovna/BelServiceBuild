@@ -7,6 +7,11 @@
 
 .wrapper {
   position: relative;
+  min-width: 321px;
+
+  @media (width <= 930px) {
+    min-width: unset;
+  }
 }
 
 .nav {
@@ -65,7 +70,6 @@
 
 .navMobile {
   position: fixed;
-  top: 70px;
   right: 4%;
 
   display: flex;
@@ -80,15 +84,15 @@
   box-shadow: 0 0 15px 2px rgb(0 0 0 / 30%);
 
   @media (width >= 768px) {
-    top: 90px;
+    top: 80px;
   }
 
   @media (width <= 768px) {
-    top: 70px;
+    top: 60px;
   }
 
   @media (width <= 480px) {
-    top: 50px;
+    top: 40px;
     right: 15px;
   }
 }

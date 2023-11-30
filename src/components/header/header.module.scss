@@ -72,10 +72,6 @@ div.box {
 }
 
 .telephoneTitle {
-  @media (width >= 900px) and (width <= 1027px) {
-    display: none;
-  }
-
   @media (width <= 576px) {
     display: none;
   }

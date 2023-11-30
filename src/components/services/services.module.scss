@@ -1,13 +1,12 @@
 .services {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 30px;
   align-items: baseline;
   justify-content: space-between;
 
   width: fit-content;
   max-width: unset;
-  height: 200px;
 
   @media (width <= 1280px) {
     gap: 10px;

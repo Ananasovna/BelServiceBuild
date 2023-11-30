@@ -21,9 +21,13 @@ export default function Page() {
       <LinksServices />
       <Services />
       <div className={s.projectsContainer}>
-        <Projects />
+        {/*Раскомментировать строку ниже при добавлении раздела наши проекты*/}
+        {/*<Projects />*/}
+        {/*Удалить строку ниже при добавлении раздела наши проекты*/}
+        <Contacts variant={'withBg'} />
       </div>
-      <Contacts />
+      {/*Раскомментировать строку ниже при добавлении раздела наши проекты*/}
+      {/*<Contacts />*/}
     </div>
   )
 }

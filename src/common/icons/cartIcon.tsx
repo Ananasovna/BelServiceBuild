@@ -1,6 +1,11 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
-export const CartIcon = ({ color = '#000', height = '60px', width = '60px' }: IconProps) => {
+export const CartIcon = ({
+  color = '#000',
+  height = '60px',
+  width = '60px',
+  ...props
+}: IconProps) => {
   return (
     <svg
       enableBackground={'new 0 0 128 128'}

@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Maintenance } from '@/components/maintenance/maintenance'
 
 // Этот объект необходимо отредактировать для SEO-продвижения, подробнее о полях здесь https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadata-fields
 export const metadata: Metadata = {
@@ -6,8 +7,8 @@ export const metadata: Metadata = {
   description: '',
 }
 
-const Maintenance = () => {
-  return <div>Maintenance</div>
+const MaintenancePage = () => {
+  return <Maintenance />
 }
 
-export default Maintenance
+export default MaintenancePage

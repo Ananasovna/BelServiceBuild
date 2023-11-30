@@ -15,7 +15,7 @@ export const PhotoDisplay = () => {
       <div className={clsx(s.display, animation && s.animationDisplay)}>
         <div className={s.bgWrapper}>
           <Image
-            onLoadingComplete={() => setAnimation(true)}
+            onLoad={() => setAnimation(true)}
             priority={true}
             alt={'Фоновое изображение'}
             className={s.mainBg}

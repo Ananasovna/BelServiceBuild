@@ -33,8 +33,6 @@ const services: NavItemType[] = [
 ]
 
 export const Header = () => {
-  const [isActive, setIsActive] = useState(false)
-
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
@@ -58,7 +56,7 @@ export const Header = () => {
       <Container className={s.headerContainer}>
         <Logo />
         <Telephone className={s.telephoneTitle} />
-        <Navbar isActive={isActive} setIsActive={setIsActive} />
+        <Navbar />
       </Container>
     </header>
 
