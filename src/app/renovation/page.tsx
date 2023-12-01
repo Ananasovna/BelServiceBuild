@@ -5,6 +5,7 @@ import { Renovation } from '@/components/renovation/renovation'
 export const metadata: Metadata = {
   title: 'Комплексный ремонт',
   description: '',
+  keywords: '',
 }
 
 const RenovationPage = () => {

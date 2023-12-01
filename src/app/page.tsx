@@ -9,8 +9,9 @@ import s from './page.module.css'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Коммерческий ремонт',
+  title: 'Ремонт коммерческих помещений',
   description: '',
+  keywords: '',
 }
 
 export default function Page() {

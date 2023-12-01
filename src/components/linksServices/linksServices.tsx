@@ -36,7 +36,7 @@ export const LinksServices = () => {
           Комплексное обслуживание
         </Typography>
       </Link>
-      <Link className={s.linkContainer} href={'/design'}>
+      <Link className={s.linkContainer} href={'/about'}>
         <div className={s.photoWrapper}>
           <Image
             alt={'Изображение проектирования'}

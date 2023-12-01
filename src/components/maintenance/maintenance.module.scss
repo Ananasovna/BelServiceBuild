@@ -1,5 +1,6 @@
 .wrapper {
   position: relative;
+  height: auto;
 }
 
 .imgWrapper {
@@ -12,12 +13,17 @@
 .photo {
   position: relative;
   z-index: -1;
-  top: -140%;
+  top: -150px;
 
   width: 100vw;
-  height: auto;
+  height: 250%;
 
   object-fit: cover;
+
+  @media (width <= 480px) {
+    top: -80px;
+    height: 150%;
+  }
 }
 
 .textWrapper {
@@ -33,7 +39,12 @@
 
   text-align: justify;
 
-  background: rgb(255 255 255 / 100%);
+  background: var(--color-light-100);
+
+  @media (width <= 1200px) {
+    position: relative;
+    padding: 0;
+  }
 }
 
 .iconTextBlock {
@@ -42,26 +53,6 @@
 
   @media (width <= 768px) {
     flex-wrap: wrap;
-  }
-}
-
-.text1 {
-  @media (width <= 768px) {
-    width: 80%;
-  }
-
-  @media (width <= 576px) {
-    width: 70%;
-  }
-
-  @media (width <= 480px) {
-    width: 100%;
-  }
-}
-
-.text2 {
-  @media (width <= 768px) {
-    width: 100%;
   }
 }
 

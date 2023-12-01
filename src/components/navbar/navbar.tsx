@@ -35,7 +35,8 @@ export const Navbar = () => {
   const services: NavItemType[] = [
     { id: 1, path: '/renovation', title: 'Комплексный ремонт' },
     { id: 2, path: '/maintenance', title: 'Комплексное обслуживание' },
-    { id: 3, path: '/design', title: 'Проектирование' },
+    /*Раскомментировать строку ниже при добавлении страницы 'Проектирование'*/
+    // { id: 3, path: '/design', title: 'Проектирование' },
   ]
 
   const openSubMenu = () => setIsSubMenu(true)

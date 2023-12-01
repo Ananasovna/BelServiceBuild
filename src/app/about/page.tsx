@@ -5,6 +5,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'О компании BelServiceBuild',
   description: '',
+  keywords: '',
 }
 
 const AboutPage = () => {
