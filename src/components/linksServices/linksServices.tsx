@@ -16,6 +16,7 @@ export const LinksServices = () => {
             alt={'Изображение ремонта'}
             className={s.photo}
             placeholder={'blur'}
+            priority={true}
             src={renovation}
           />
         </div>
@@ -29,6 +30,7 @@ export const LinksServices = () => {
             alt={'Изображение обслуживания'}
             className={s.photo}
             placeholder={'blur'}
+            priority={true}
             src={service}
           />
         </div>
@@ -42,6 +44,7 @@ export const LinksServices = () => {
             alt={'Изображение проектирования'}
             className={s.photo}
             placeholder={'blur'}
+            priority={true}
             src={design}
           />
         </div>
