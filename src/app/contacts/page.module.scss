@@ -1,0 +1,44 @@
+.wrapper {
+  height: 100%;
+
+  //display: flex;
+  //flex-direction: column;
+}
+
+.imgWrapper {
+  position: relative;
+  z-index: -1;
+
+  overflow: hidden;
+  display: flex;
+
+  width: auto;
+  height: auto;
+  max-height: 350px;
+
+  @media (width <= 1200px) {
+    //max-height: 200px;
+  }
+
+  @media (width <= 768px) {
+    max-height: 150px;
+  }
+}
+
+.photo {
+  position: relative;
+  top: -500px;
+
+  width: 100vw;
+  height: 100%;
+
+  object-fit: cover;
+
+  @media (width <= 1200px) {
+    top: unset;
+  }
+
+  @media (width <= 480px) {
+    //height: 150%;
+  }
+}

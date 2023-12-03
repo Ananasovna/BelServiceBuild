@@ -22,7 +22,7 @@ import { ExitIcon } from '@/common/icons/exitIcon'
 import { FireproofIcon } from '@/common/icons/fireproofIcon'
 export const Services = ({ children }: ServicesProps) => {
   return (
-    <Container>
+    <Container className={s.servicesContainer}>
       <TitleContainer className={s.title} variant={'h2'}>
         Услуги
       </TitleContainer>

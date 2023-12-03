@@ -20,12 +20,12 @@
 
   /* Виды высоты шрифта */
   --line-height-s: 16px;
-  --line-height-m: 24px;
-  --line-height-l: 36px;
+  --line-height-m: 26px;
+  --line-height-l: 38px;
 
   /* Размеры шрифта */
-  --font-size-xs: 0.95rem;
-  --font-size-s: 1rem;
+  --font-size-xs: 1rem;
+  --font-size-s: 1.2rem;
   --font-size-m: 1.3rem;
   --font-size-l: 1.3rem;
   --font-size-xl: 1.8rem;
@@ -69,14 +69,10 @@ a {
   height: 110px;
 
   @media (width <= 1280px) {
-    height: 90px;
-  }
-
-  @media (width <= 768px) {
     height: 70px;
   }
 
-  @media (width <= 480px) {
+  @media (width <= 768px) {
     height: 50px;
   }
 }

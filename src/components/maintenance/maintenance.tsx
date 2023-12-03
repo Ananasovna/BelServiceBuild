@@ -10,7 +10,12 @@ export const Maintenance = () => {
     <Container className={s.wrapper}>
       <TitleContainer variant={'h2'}>{'Комплексное обслуживание'}</TitleContainer>
       <div className={s.imgWrapper}>
-        <Image className={s.photo} src={maintenance} alt={'Комплексное обслуживание'} />
+        <Image
+          placeholder={'blur'}
+          className={s.photo}
+          src={maintenance}
+          alt={'Комплексное обслуживание фото'}
+        />
       </div>
       <div className={s.textWrapper}>
         <Typography className={s.text1}>
