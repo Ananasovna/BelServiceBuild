@@ -12,9 +12,13 @@
     height: 70px;
   }
 
-  @media (width <= 768px) {
+  @media (width <= 1080px) {
     height: 50px;
   }
+
+  //@media (width <= 768px) {
+  //  height: 50px;
+  //}
 }
 
 div.headerContainer {
