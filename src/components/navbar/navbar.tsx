@@ -43,21 +43,21 @@ export const Navbar = () => {
 
   const mappedSubMenu = services.map(el => (
     <div className={s.navItemWrapper}>
-      <NavItem key={el.id} navItem={el} />
+      <NavItem className={s.navItem} key={el.id} navItem={el} />
     </div>
   ))
 
   const mappedNavigation = navigation.map(el =>
     el.title === 'Услуги' ? (
       <div className={s.navItemWrapper}>
-        <NavItem key={el.id} navItem={el} onClick={openSubMenu} />
+        <NavItem className={s.navItem} key={el.id} navItem={el} onClick={openSubMenu} />
         <div onClick={closeMenus} className={clsx(s.invisible, isSubMenu && s.subMenu)}>
           {mappedSubMenu}
         </div>
       </div>
     ) : (
       <div className={s.navItemWrapper} onClick={closeMenus}>
-        <NavItem key={el.id} navItem={el} />
+        <NavItem className={s.navItem} key={el.id} navItem={el} />
       </div>
     )
   )
