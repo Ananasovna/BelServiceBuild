@@ -72,7 +72,7 @@ a {
     height: 70px;
   }
 
-  @media (width <= 768px) {
+  @media (width <= 1080px) {
     height: 50px;
   }
 }
