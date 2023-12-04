@@ -1,57 +1,33 @@
-import renovation from '@/../public/image/complexRenovation.jpg'
-import service from '@/../public/image/complexServices.jpg'
-import design from '@/../public/image/design.jpg'
 import { Typography } from '@/common/components/typography/typography'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import s from './linksServices.module.scss'
+import { LinksServicesDataType } from '@/common/data/linksServicesData'
 
-export const LinksServices = () => {
-  return (
-    <div className={s.wrapper}>
-      <Link className={s.linkContainer} href={'/renovation'}>
+type LinksServicesProps = {
+  data: LinksServicesDataType
+}
+
+export const LinksServices = ({ data }: LinksServicesProps) => {
+  const mappedServices = data.map(el => {
+    return (
+      <Link key={el.id} className={s.linkContainer} href={el.href}>
         <div className={s.photoWrapper}>
           <Image
-            alt={'Изображение ремонта'}
+            alt={el.alt}
             className={s.photo}
             placeholder={'blur'}
             priority={true}
-            src={renovation}
+            src={el.img}
           />
         </div>
         <Typography className={s.title} variant={'h3'}>
-          Комплексный ремонт
+          {el.title}
         </Typography>
       </Link>
-      <Link className={s.linkContainer} href={'/maintenance'}>
-        <div className={s.photoWrapper}>
-          <Image
-            alt={'Изображение обслуживания'}
-            className={s.photo}
-            placeholder={'blur'}
-            priority={true}
-            src={service}
-          />
-        </div>
-        <Typography className={s.title} variant={'h3'}>
-          Комплексное обслуживание
-        </Typography>
-      </Link>
-      <Link className={s.linkContainer} href={'/about'}>
-        <div className={s.photoWrapper}>
-          <Image
-            alt={'Изображение проектирования'}
-            className={s.photo}
-            placeholder={'blur'}
-            priority={true}
-            src={design}
-          />
-        </div>
-        <Typography className={s.title} variant={'h3'}>
-          Проектирование
-        </Typography>
-      </Link>
-    </div>
-  )
+    )
+  })
+
+  return <div className={s.wrapper}>{mappedServices}</div>
 }

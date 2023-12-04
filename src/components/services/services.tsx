@@ -10,6 +10,7 @@ import { ServiceItem } from '@/components/services/serviceItem/serviceItem'
 
 type ServicesProps = {
   children?: ReactNode
+  data: ServicesDataType
 }
 
 import { ReactNode } from 'react'
@@ -17,45 +18,23 @@ import { ReactNode } from 'react'
 import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
 
 import s from './services.module.scss'
-import { DoorsIcon } from '@/common/icons/doorsIcon'
-import { ExitIcon } from '@/common/icons/exitIcon'
-import { FireproofIcon } from '@/common/icons/fireproofIcon'
-export const Services = ({ children }: ServicesProps) => {
+import { ServicesDataType } from '@/common/data/servicesData'
+
+export const Services = ({ children, data }: ServicesProps) => {
+  const mappedServices = data.servicesList.map(el => {
+    return (
+      <ServiceItem key={el.id} title={`${el.id}. ${el.text}`}>
+        {el.icon}
+      </ServiceItem>
+    )
+  })
+
   return (
     <Container className={s.servicesContainer}>
       <TitleContainer className={s.title} variant={'h2'}>
-        Услуги
+        {data.title}
       </TitleContainer>
-
-      <div className={s.services}>
-        <ServiceItem title={'1. Демонтаж'}>
-          <CartIcon color={'#ce5d00'} />
-        </ServiceItem>
-        <ServiceItem title={'2. Электромонтаж'}>
-          <ElectricityIcon color={'#ce5d00'} />
-        </ServiceItem>
-        <ServiceItem title={'3. Сантехнические работы'}>
-          <PlumbingIcon color={'#ce5d00'} />
-        </ServiceItem>
-        <ServiceItem title={'4. Проектирование'}>
-          <ProjectIcon color={'#ce5d00'} />
-        </ServiceItem>
-        <ServiceItem title={'5. Отделочные работы'}>
-          <RollerIcon color={'#ce5d00'} />
-        </ServiceItem>
-        <ServiceItem title={'6. Отопление, вентиляция и кондиционирование'}>
-          <SnowflakeIcon color={'#ce5d00'} />
-        </ServiceItem>
-        <ServiceItem title={'7. Монтаж и изготовление противопожарных дверей'}>
-          <DoorsIcon color={'#ce5d00'} />
-        </ServiceItem>
-        <ServiceItem title={'8. Монтаж аварийного освещения и указателей путей эвакуации'}>
-          <ExitIcon color={'#ce5d00'} />
-        </ServiceItem>
-        <ServiceItem title={'9. Обработка огнезащитным составом деревянных конструкций'}>
-          <FireproofIcon color={'#ce5d00'} />
-        </ServiceItem>
-      </div>
+      <div className={s.services}>{mappedServices}</div>
       {children}
     </Container>
   )

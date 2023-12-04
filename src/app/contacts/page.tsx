@@ -2,7 +2,8 @@ import { Contacts } from '@/components/contacts/contacts'
 import { Metadata } from 'next'
 import s from './page.module.scss'
 import Image from 'next/image'
-import contacts from '../../../public/image/contacts.jpg'
+
+import { contactsData } from '@/common/data/contactsData'
 
 // Этот объект необходимо отредактировать для SEO-продвижения, подробнее о полях здесь https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadata-fields
 export const metadata: Metadata = {
@@ -14,9 +15,15 @@ export const metadata: Metadata = {
 const ContactsPage = () => {
   return (
     <div className={s.wrapper}>
-      <Contacts />
+      <Contacts data={contactsData} />
       <div className={s.imgWrapper}>
-        <Image placeholder={'blur'} className={s.photo} src={contacts} alt={'Контакты фото'} />
+        <Image
+          placeholder={'blur'}
+          className={s.photo}
+          src={contactsData.img}
+          priority={true}
+          alt={'Контакты фото'}
+        />
       </div>
     </div>
   )

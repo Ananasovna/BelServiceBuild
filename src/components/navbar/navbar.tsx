@@ -6,12 +6,7 @@ import { clsx } from 'clsx'
 import { MenuIcon } from '@/common/icons/menuIcon'
 import { useState } from 'react'
 import { useOutsideClickRef } from 'rooks'
-
-export type NavItemType = {
-  id: number
-  path: string
-  title: string
-}
+import { navbarData } from '@/common/data/navbarData'
 
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false)
@@ -23,31 +18,17 @@ export const Navbar = () => {
   }
   const [ref] = useOutsideClickRef(closeMenus)
 
-  const navigation: NavItemType[] = [
-    { id: 1, path: '/', title: 'Главная' },
-    { id: 2, path: '/about', title: 'О нас' },
-    { id: 3, path: '', title: 'Услуги' },
-    /*Раскомментировать строку ниже при добавлении раздела наши проекты*/
-    // { id: 4, path: '/projects', title: 'Наши проекты' },
-    { id: 5, path: '/contacts', title: 'Контакты' },
-  ]
-
-  const services: NavItemType[] = [
-    { id: 1, path: '/renovation', title: 'Комплексный ремонт' },
-    { id: 2, path: '/maintenance', title: 'Комплексное обслуживание' },
-    /*Раскомментировать строку ниже при добавлении страницы 'Проектирование'*/
-    // { id: 3, path: '/design', title: 'Проектирование' },
-  ]
+  const { menu, subMenu } = { ...navbarData }
 
   const openSubMenu = () => setIsSubMenu(true)
 
-  const mappedSubMenu = services.map(el => (
+  const mappedSubMenu = subMenu.map(el => (
     <div className={s.navItemWrapper}>
       <NavItem className={s.navItem} key={el.id} navItem={el} />
     </div>
   ))
 
-  const mappedNavigation = navigation.map(el =>
+  const mappedNavigation = menu.map(el =>
     el.title === 'Услуги' ? (
       <div className={s.navItemWrapper}>
         <NavItem className={s.navItem} key={el.id} navItem={el} onClick={openSubMenu} />

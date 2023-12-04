@@ -5,11 +5,13 @@ import Link from 'next/link'
 
 import s from './telephone.module.scss'
 
-export type ContactsProps = {
+type TelephoneProps = {
   height?: string
   width?: string
   withBg?: boolean
   className?: string
+  phone: string
+  phoneHref: string
 }
 
 export const Telephone = ({
@@ -17,19 +19,21 @@ export const Telephone = ({
   width = 'auto',
   withBg = false,
   className,
-}: ContactsProps) => {
+  phone,
+  phoneHref,
+}: TelephoneProps) => {
   const contactClass = clsx(s.wrapperLink, withBg && s.withBg)
 
   const titleClass = clsx(s.title, className)
 
   return (
     <div className={s.wrapper}>
-      <Link className={contactClass} href={'tel:+79935635154'}>
+      <Link className={contactClass} href={phoneHref}>
         <div className={s.iconWrapper}>
           <TelephoneIcon height={height} width={width} />
         </div>
         <Typography className={titleClass} variant={'subtitle2'}>
-          +7 (993) 563 51 54
+          {phone}
         </Typography>
       </Link>
     </div>

@@ -5,13 +5,18 @@ import { Telephone } from '@/common/components/telephone/telephone'
 
 import s from './header.module.scss'
 import { Navbar } from '@/components/navbar/navbar'
+import { ContactsDataType } from '@/common/data/contactsData'
 
-export const Header = () => {
+type HeaderProps = {
+  data: ContactsDataType
+}
+
+export const Header = ({ data }: HeaderProps) => {
   return (
     <header className={s.appBar}>
       <Container className={s.headerContainer}>
         <Logo />
-        <Telephone className={s.telephoneTitle} />
+        <Telephone phone={data.phone} phoneHref={data.phoneHref} className={s.telephoneTitle} />
         <Navbar />
       </Container>
     </header>

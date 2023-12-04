@@ -1,6 +1,6 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
-export const PlumbingIcon = ({ color = '#000', height = '60px', width = '60px' }: IconProps) => {
+export const PlumbingIcon = ({ color = '#ce5d00', height = '60px', width = '60px' }: IconProps) => {
   return (
     <svg
       data-name={'Layer 1'}

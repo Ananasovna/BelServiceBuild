@@ -1,7 +1,7 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
 export const RenovationIcon = ({
-  color = '#000',
+  color = '#ce5d00',
   height = '100%',
   width = '100%',
   ...props

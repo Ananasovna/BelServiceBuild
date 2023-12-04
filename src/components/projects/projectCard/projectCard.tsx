@@ -12,7 +12,13 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div className={s.project}>
       <div className={s.imageWrapper}>
-        <Image alt={project.alt} className={s.image} placeholder={'blur'} src={project.img} />
+        <Image
+          alt={project.alt}
+          className={s.image}
+          placeholder={'blur'}
+          src={project.img}
+          priority={true}
+        />
       </div>
       {project.title !== '' && (
         <Typography className={s.title} variant={'subtitle2'}>

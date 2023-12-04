@@ -6,48 +6,27 @@ import s from './renovation.module.scss'
 import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
 import { ListItem } from '@/common/components/listItem/listItem'
 import { RenovationIcon } from '@/common/icons/renovationIcon'
+import { RenovationDataType } from '@/common/data/renovationData'
 
-export const Renovation = () => {
-  const list = [
-    { id: 1, text: 'Демонтажные / монтажные работы по планировке помещений;' },
-    {
-      id: 2,
-      text: 'Демонтаж/монтаж инженерных коммуникаций (вентиляция, канализация, отопление, электропроводка);',
-    },
-    { id: 3, text: 'Замену потолочных подвесных и натяжных конструкций;' },
-    { id: 4, text: 'Черновую отделку стен и полов (штукатурка, шпатлевка, стяжка);' },
-    {
-      id: 5,
-      text: 'Финишную отделку потолков и стен (побелка, покраска, декоративная штукатурка и т.д.);',
-    },
-    {
-      id: 6,
-      text: 'Установку напольных покрытий любого типа (включая укладку керамической плитки);',
-    },
-    {
-      id: 7,
-      text: 'Монтаж климатических, электрических и сантехнических приборов;',
-    },
-    {
-      id: 8,
-      text: 'Уборку строительного мусора.',
-    },
-  ]
+type RenovationProps = {
+  data: RenovationDataType
+}
 
-  const mappedList = list.map(el => <ListItem key={el.id}>{el.text}</ListItem>)
+export const Renovation = ({ data }: RenovationProps) => {
+  const mappedList = data.renovationList.map(el => <ListItem key={el.id}>{el.text}</ListItem>)
 
   return (
     <Container>
-      <TitleContainer variant={'h2'}>{'Комплексный ремонт'}</TitleContainer>
+      <TitleContainer variant={'h2'}>{data.title}</TitleContainer>
       <div className={s.bg}>
         <div className={s.textWrapper}>
           <div className={s.iconTextBlock}>
             <div className={s.iconWrapperBig}>
-              <RenovationIcon color={'#ce5d00'} height={'100%'} />
+              <RenovationIcon height={'100%'} />
             </div>
             <div className={s.textWithIcon}>
               <div className={s.iconWrapperSmall}>
-                <RenovationIcon color={'#ce5d00'} height={'100%'} />
+                <RenovationIcon height={'100%'} />
               </div>
               <Typography className={s.text1}>
                 <strong>Ремонт нежилых помещений</strong> важен для бизнеса, поскольку такие
@@ -67,22 +46,11 @@ export const Renovation = () => {
           </div>
           <div className={s.listWrapper}>
             <Typography className={s.listTitle}>
-              <strong>
-                Комплекс ремонта и отделки коммерческих помещений от компании «БелСервисСтрой»
-                предполагает:
-              </strong>
+              <strong>{data.listTitle}</strong>
             </Typography>
             <div className={s.list}>{mappedList}</div>
           </div>
-          <Typography className={s.textItalic}>
-            Мы проведем ремонт и отделку ком&shy;мер&shy;ческих помещений быстро,
-            про&shy;фес&shy;сиональ&shy;но, экономично, с соб&shy;люде&shy;нием технических
-            строительных стандартов и требований к различным видам помещений, тщательным контролем
-            над соблюдением проекта и сметы расходов! В кратчайшие сроки вы получите в эксплуатацию
-            помещения для ком&shy;мерчес&shy;кого использования, от&shy;ве&shy;чаю&shy;щие мировым
-            стандартам качества, безопасности и принципов сов&shy;ре&shy;мен&shy;ного интерьерного
-            дизайна!
-          </Typography>
+          <Typography className={s.textItalic}>{data.text2}</Typography>
         </div>
       </div>
     </Container>

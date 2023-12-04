@@ -8,12 +8,14 @@ import { Typography } from '@/common/components/typography/typography'
 
 import s from './contacts.module.scss'
 import { clsx } from 'clsx'
+import { ContactsDataType } from '@/common/data/contactsData'
 
 type ContactsProps = {
   variant?: 'withBg'
+  data: ContactsDataType
 }
 
-export const Contacts = ({ variant }: ContactsProps) => {
+export const Contacts = ({ variant, data }: ContactsProps) => {
   return (
     <Container className={s.contactsContainer}>
       <div className={s.formWrapper}>
@@ -21,21 +23,26 @@ export const Contacts = ({ variant }: ContactsProps) => {
       </div>
       <div className={s.contactsWrapper}>
         <TitleContainer variant={'h2'} align={'left'}>
-          Контакты
+          {data.title}
         </TitleContainer>
         <div className={s.contactsLinks}>
           <div className={clsx(s.telWrapper, variant && s.whiteBg)}>
-            <Telephone height={'20px'} width={'20px'} />
-            <Email height={'30px'} width={'30px'} />
+            <Telephone
+              phone={data.phone}
+              phoneHref={data.phoneHref}
+              height={'20px'}
+              width={'20px'}
+            />
+            <Email email={data.email} emailHref={data.emailHref} height={'30px'} width={'30px'} />
           </div>
           {variant ? (
-            <Address height={'30px'} width={'30px'} />
+            <Address address={data.address} height={'30px'} width={'30px'} />
           ) : (
-            <Address height={'30px'} width={'30px'} withBg={true} />
+            <Address address={data.address} height={'30px'} width={'30px'} withBg={true} />
           )}
           <div className={clsx(s.info, variant && s.whiteBg)}>
-            <Typography variant={'subtitle2'}>ООО "БелСервисСтрой"</Typography>
-            <Typography variant={'subtitle2'}>ИНН: 6700007034</Typography>
+            <Typography variant={'subtitle2'}>{data.name}</Typography>
+            <Typography variant={'subtitle2'}>{data.tin}</Typography>
           </div>
         </div>
       </div>

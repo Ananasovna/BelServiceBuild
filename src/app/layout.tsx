@@ -6,6 +6,7 @@ import Head from 'next/head'
 
 import './globals.css'
 import type { Metadata } from 'next'
+import { contactsData } from '@/common/data/contactsData'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -15,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta content={'#ffffff'} name={'theme-color'} />
       </Head>
       <body className={'main'}>
-        <Header />
+        <Header data={contactsData} />
         <div className={'content'}>
           <div className={'headerReplacer'}></div>
           {children}

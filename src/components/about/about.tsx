@@ -1,4 +1,3 @@
-import logo from '@/../public/image/logoFull.jpg'
 import { Container } from '@/common/components/container/container'
 import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
 import { Typography } from '@/common/components/typography/typography'
@@ -6,45 +5,21 @@ import Image from 'next/image'
 
 import s from './about.module.scss'
 import { ListItem } from '@/common/components/listItem/listItem'
+import { AboutType } from '@/common/data/aboutData'
 
-export const About = () => {
-  const list = [
-    { id: 1, text: 'Высокий уровень организации строительно-монтажных работ.' },
-    {
-      id: 2,
-      text: 'Современное высокотехнологичное оборудование.',
-    },
-    {
-      id: 3,
-      text: 'Строгое следование строительным стандартам и требованиям безопасности при выполнении проектно-инженерных работ.',
-    },
-    { id: 4, text: 'Высокая квалификация сотрудников компании.' },
-    {
-      id: 5,
-      text: 'Соблюдение сроков строительства.',
-    },
-    {
-      id: 6,
-      text: 'Оперативное взаимодействие с клиентами.',
-    },
-    {
-      id: 7,
-      text: 'Консультации по вопросам проектирования и дизайна.',
-    },
-    {
-      id: 8,
-      text: 'Конкурентная стоимость строительно-монтажных работ.',
-    },
-  ]
+type AboutPropsType = {
+  data: AboutType
+}
 
-  const mappedList = list.map(el => <ListItem key={el.id}>{el.text}</ListItem>)
+export const About = ({ data }: AboutPropsType) => {
+  const mappedList = data.aboutList.map(el => <ListItem key={el.id}>{el.text}</ListItem>)
 
   return (
     <Container className={s.aboutContainer}>
       <div className={s.logoBlock}>
         <div className={s.wrapper}>
           <TitleContainer className={s.title} variant={'h2'} align={'left'}>
-            О нас
+            {data.title}
           </TitleContainer>
           <div className={s.listWrapper}>
             <Typography className={s.listTitle}>
@@ -54,7 +29,7 @@ export const About = () => {
           </div>
         </div>
         <div className={s.photoWrapper}>
-          <Image alt={'Фото компании'} className={s.photo} src={logo} />
+          <Image alt={'Фото компании'} className={s.photo} src={data.logo} />
         </div>
       </div>
       <Typography className={s.text1}>
@@ -72,11 +47,7 @@ export const About = () => {
         не&shy;исправ&shy;ности и отправят к Вам вы&shy;соко&shy;квали&shy;фицированных электриков,
         отде&shy;лочников, специалистов по вентиляции и кондиционированию.
       </Typography>
-      <Typography className={s.text2}>
-        Мы работаем в Москве, Санкт-Петербурге, Екатеринбурге, Пскове, Череповце, Белгороде,
-        Астрахани, Казани, Самаре, Уфе, Якутске, Новосибирске, Хабаровске, Саратове, Иркутске,
-        Ангарске, Коломне, Перми, Старом Осколе и других городах.
-      </Typography>
+      <Typography className={s.text2}>{data.text2}</Typography>
     </Container>
   )
 }
