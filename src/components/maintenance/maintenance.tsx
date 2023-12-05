@@ -3,7 +3,7 @@ import { TitleContainer } from '@/common/components/titleContainer/titleContaine
 import s from './maintenance.module.scss'
 import { Typography } from '@/common/components/typography/typography'
 import Image from 'next/image'
-import { MaintenanceDataType } from '@/common/data/maintanence'
+import { MaintenanceDataType } from '@/common/data/maintanenceData'
 
 type MaintenanceProps = {
   data: MaintenanceDataType

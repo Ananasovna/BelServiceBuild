@@ -31,7 +31,7 @@ export const EmailForm = () => {
       <FormikProvider value={formik}>
         <form action={handleAction} className={s.formContainer}>
           <div className={s.fieldWrapper}>
-            {formik.errors.name && <ErrorCloud text={formik.errors.name} />}
+            {formik.touched.name && formik.errors.name && <ErrorCloud text={formik.errors.name} />}
             <Field
               className={s.field}
               placeholder={'Ваше имя'}
@@ -40,7 +40,9 @@ export const EmailForm = () => {
             />
           </div>
           <div className={s.fieldWrapper}>
-            {formik.errors.email && <ErrorCloud text={formik.errors.email} />}
+            {formik.touched.email && formik.errors.email && (
+              <ErrorCloud text={formik.errors.email} />
+            )}
             <Field
               className={s.field}
               placeholder={'Ваш почтовый адрес'}
@@ -49,7 +51,9 @@ export const EmailForm = () => {
             />
           </div>
           <div className={s.textfieldWrapper}>
-            {formik.errors.message && <ErrorCloud text={formik.errors.message} />}
+            {formik.touched.message && formik.errors.message && (
+              <ErrorCloud text={formik.errors.message} />
+            )}
             <Field
               as={'textarea'}
               className={s.textfield}
