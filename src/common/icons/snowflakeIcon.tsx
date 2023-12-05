@@ -1,16 +1,10 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
-export const SnowflakeIcon = ({
-  color = '#ce5d00',
-  height = '60px',
-  width = '60px',
-}: IconProps) => {
+export const SnowflakeIcon = ({ color = '#ce5d00' }: IconProps) => {
   return (
     <svg
       fill={color}
-      height={height}
       viewBox={'0 0 512.002 512.002'}
-      width={width}
       xmlSpace={'preserve'}
       xmlns={'http://www.w3.org/2000/svg'}
     >

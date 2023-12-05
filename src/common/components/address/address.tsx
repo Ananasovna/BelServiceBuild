@@ -12,19 +12,14 @@ type AddressProps = {
   address: string
 }
 
-export const Address = ({
-  height = '40px',
-  width = '40px',
-  withBg = false,
-  address,
-}: AddressProps) => {
+export const Address = ({ withBg = false, address }: AddressProps) => {
   const contactClass = clsx(s.wrapper, withBg && s.withBg)
 
   return (
     <div>
       <div className={contactClass}>
         <div className={s.iconWrapper}>
-          <HouseIcon height={height} width={width} />
+          <HouseIcon />
         </div>
         <Typography variant={'subtitle2'}>{address}</Typography>
       </div>

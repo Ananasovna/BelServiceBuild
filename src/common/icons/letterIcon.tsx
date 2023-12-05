@@ -1,15 +1,9 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
-export const LetterIcon = ({
-  color = '#000',
-  height = '60px',
-  width = '60px',
-  ...props
-}: IconProps) => {
+export const LetterIcon = ({ color = '#000', ...props }: IconProps) => {
   return (
     <svg
       fill={color}
-      height={height}
       style={{
         clipRule: 'evenodd',
         fillRule: 'evenodd',
@@ -17,7 +11,6 @@ export const LetterIcon = ({
         strokeMiterlimit: 2,
       }}
       viewBox={'0 0 32 32'}
-      width={width}
       xmlSpace={'preserve'}
       xmlns={'http://www.w3.org/2000/svg'}
       {...props}

@@ -2,8 +2,7 @@ import { IconProps } from '@/common/icons/telephoneIcon'
 
 export const RenovationIcon = ({
   color = '#ce5d00',
-  height = '100%',
-  width = '100%',
+
   ...props
 }: IconProps) => {
   return (
@@ -11,9 +10,7 @@ export const RenovationIcon = ({
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
       viewBox="0 0 128 128"
-      width={width}
       fill={color}
-      height={height}
       {...props}
     >
       <g fill={color}>

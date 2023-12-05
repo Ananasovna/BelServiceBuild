@@ -25,10 +25,12 @@ export const Projects = ({ data }: ProjectsProps) => {
   }
 
   return (
-    <Container>
-      <TitleContainer variant={'h2'}>{data.title}</TitleContainer>
-      <div className={projectsWrapperClass}>{mappedProjects}</div>
-      <Button onClick={toggleShowAll}>{showAll ? 'Скрыть проекты' : 'Больше проектов'}</Button>
-    </Container>
+    <section>
+      <Container>
+        <TitleContainer variant={'h2'}>{data.title}</TitleContainer>
+        <div className={projectsWrapperClass}>{mappedProjects}</div>
+        <Button onClick={toggleShowAll}>{showAll ? 'Скрыть проекты' : 'Больше проектов'}</Button>
+      </Container>
+    </section>
   )
 }

@@ -1,16 +1,9 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
-export const DoorsIcon = ({
-  color = '#ce5d00',
-  height = '60px',
-  width = '60px',
-  ...props
-}: IconProps) => {
+export const DoorsIcon = ({ color = '#ce5d00', ...props }: IconProps) => {
   return (
     <svg
-      width={width}
       fill={color}
-      height={height}
       xmlns="http://www.w3.org/2000/svg"
       data-name="Layer 3"
       viewBox="0 0 64 64"

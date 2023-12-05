@@ -30,12 +30,14 @@ export const Services = ({ children, data }: ServicesProps) => {
   })
 
   return (
-    <Container className={s.servicesContainer}>
-      <TitleContainer className={s.title} variant={'h2'}>
-        {data.title}
-      </TitleContainer>
-      <div className={s.services}>{mappedServices}</div>
-      {children}
-    </Container>
+    <section>
+      <Container className={s.servicesContainer}>
+        <TitleContainer className={s.title} variant={'h2'}>
+          {data.title}
+        </TitleContainer>
+        <div className={s.services}>{mappedServices}</div>
+        {children}
+      </Container>
+    </section>
   )
 }

@@ -1,16 +1,9 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
-export const Checkmark = ({
-  color = '#000',
-  height = '60px',
-  width = '60px',
-  ...props
-}: IconProps) => {
+export const Checkmark = ({ color = '#000', ...props }: IconProps) => {
   return (
     <svg
       fill={color}
-      height={height}
-      width={width}
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
       viewBox="0 0 548.873 548.873"

@@ -1,16 +1,9 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
-export const HouseIcon = ({
-  color = '#000',
-  height = '60px',
-  width = '60px',
-  ...props
-}: IconProps) => (
+export const HouseIcon = ({ color = '#000', ...props }: IconProps) => (
   <svg
     fill={color}
-    height={height}
     viewBox={'0 0 512 512'}
-    width={width}
     xmlSpace={'preserve'}
     xmlns={'http://www.w3.org/2000/svg'}
     {...props}

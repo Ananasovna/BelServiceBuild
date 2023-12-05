@@ -5,7 +5,6 @@ import { Header } from '@/components/header/header'
 import Head from 'next/head'
 
 import './globals.css'
-import type { Metadata } from 'next'
 import { contactsData } from '@/common/data/contactsData'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -17,10 +16,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </Head>
       <body className={'main'}>
         <Header data={contactsData} />
-        <div className={'content'}>
+        <main className={'content'}>
           <div className={'headerReplacer'}></div>
           {children}
-        </div>
+        </main>
         <Footer />
       </body>
     </html>

@@ -4,15 +4,13 @@ export type IconProps = {
   width?: string
 }
 
-export const TelephoneIcon = ({ color = '#000', height = '30px', width = '30px' }: IconProps) => {
+export const TelephoneIcon = ({ color = '#000' }: IconProps) => {
   return (
     <svg
       fill={color}
-      height={height}
       id={'Capa_1'}
       version={'1.1'}
       viewBox={'0 0 512.001 512.001'}
-      width={width}
       x={'0px'}
       xmlSpace={'preserve'}
       xmlns={'http://www.w3.org/2000/svg'}

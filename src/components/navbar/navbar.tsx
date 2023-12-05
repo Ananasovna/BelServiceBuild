@@ -23,22 +23,22 @@ export const Navbar = () => {
   const openSubMenu = () => setIsSubMenu(true)
 
   const mappedSubMenu = subMenu.map(el => (
-    <div className={s.navItemWrapper}>
-      <NavItem className={s.navItem} key={el.id} navItem={el} />
+    <div key={el.id} className={s.navItemWrapper}>
+      <NavItem className={s.navItem} navItem={el} />
     </div>
   ))
 
   const mappedNavigation = menu.map(el =>
     el.title === 'Услуги' ? (
-      <div className={s.navItemWrapper}>
-        <NavItem className={s.navItem} key={el.id} navItem={el} onClick={openSubMenu} />
+      <div key={el.id} className={s.navItemWrapper}>
+        <NavItem className={s.navItem} navItem={el} onClick={openSubMenu} />
         <div onClick={closeMenus} className={clsx(s.invisible, isSubMenu && s.subMenu)}>
           {mappedSubMenu}
         </div>
       </div>
     ) : (
-      <div className={s.navItemWrapper} onClick={closeMenus}>
-        <NavItem className={s.navItem} key={el.id} navItem={el} />
+      <div key={el.id} className={s.navItemWrapper} onClick={closeMenus}>
+        <NavItem className={s.navItem} navItem={el} />
       </div>
     )
   )
@@ -51,7 +51,7 @@ export const Navbar = () => {
   return (
     <div className={clsx(s.wrapper, isActive && s.wrapperMobile)}>
       <div className={clsx(s.burgerMenu)} onClick={clickBtn}>
-        <MenuIcon />
+        <MenuIcon height={'20px'} width={'20px'} />
       </div>
       <nav ref={ref} className={clsx(s.nav, isActive && s.navMobile)}>
         {mappedNavigation}

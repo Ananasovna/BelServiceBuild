@@ -1,13 +1,11 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
-export const PlumbingIcon = ({ color = '#ce5d00', height = '60px', width = '60px' }: IconProps) => {
+export const PlumbingIcon = ({ color = '#ce5d00' }: IconProps) => {
   return (
     <svg
       data-name={'Layer 1'}
       fill={color}
-      height={height}
       viewBox={'0 0 1000 1000'}
-      width={width}
       xmlns={'http://www.w3.org/2000/svg'}
     >
       <path

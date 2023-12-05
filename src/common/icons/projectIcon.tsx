@@ -1,14 +1,8 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
-export const ProjectIcon = ({ color = '#ce5d00', height = '60px', width = '60px' }: IconProps) => {
+export const ProjectIcon = ({ color = '#ce5d00' }: IconProps) => {
   return (
-    <svg
-      height={height}
-      viewBox={'0 0 128 128'}
-      width={width}
-      xmlSpace={'preserve'}
-      xmlns={'http://www.w3.org/2000/svg'}
-    >
+    <svg viewBox={'0 0 128 128'} xmlSpace={'preserve'} xmlns={'http://www.w3.org/2000/svg'}>
       <g fill={color}>
         <path
           d={

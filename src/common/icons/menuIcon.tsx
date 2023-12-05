@@ -1,16 +1,9 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
-export const MenuIcon = ({
-  color = '#000',
-  height = '20px',
-  width = '20px',
-  ...props
-}: IconProps) => {
+export const MenuIcon = ({ color = '#000', ...props }: IconProps) => {
   return (
     <svg
       fill={color}
-      height={height}
-      width={width}
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
       viewBox="0 0 384 384"

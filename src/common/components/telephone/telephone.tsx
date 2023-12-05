@@ -14,14 +14,7 @@ type TelephoneProps = {
   phoneHref: string
 }
 
-export const Telephone = ({
-  height = '100%',
-  width = 'auto',
-  withBg = false,
-  className,
-  phone,
-  phoneHref,
-}: TelephoneProps) => {
+export const Telephone = ({ withBg = false, className, phone, phoneHref }: TelephoneProps) => {
   const contactClass = clsx(s.wrapperLink, withBg && s.withBg)
 
   const titleClass = clsx(s.title, className)
@@ -30,7 +23,7 @@ export const Telephone = ({
     <div className={s.wrapper}>
       <Link className={contactClass} href={phoneHref}>
         <div className={s.iconWrapper}>
-          <TelephoneIcon height={height} width={width} />
+          <TelephoneIcon />
         </div>
         <Typography className={titleClass} variant={'subtitle2'}>
           {phone}

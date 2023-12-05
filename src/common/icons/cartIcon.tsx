@@ -1,20 +1,13 @@
 import { IconProps } from '@/common/icons/telephoneIcon'
 
-export const CartIcon = ({
-  color = '#ce5d00',
-  height = '60px',
-  width = '60px',
-  ...props
-}: IconProps) => {
+export const CartIcon = ({ color = '#ce5d00', ...props }: IconProps) => {
   return (
     <svg
       enableBackground={'new 0 0 128 128'}
       fill={color}
-      height={height}
       id={'Слой_1'}
       version={'1.1'}
       viewBox={'0 0 128 128'}
-      width={width}
       xmlSpace={'preserve'}
       xmlns={'http://www.w3.org/2000/svg'}
     >

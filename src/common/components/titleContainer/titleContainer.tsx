@@ -12,12 +12,12 @@ type TitleProps<T extends ElementType> = {
 } & ComponentPropsWithoutRef<T>
 
 export const TitleContainer = <T extends ElementType = 'div'>(props: TitleProps<T>) => {
-  const { align = 'center', children, variant, className, ...rest } = props
+  const { align = 'center', children, variant, className, as, ...rest } = props
   const titleClass = clsx(s.titleWrapper, align === 'left' && s.alignLeft)
 
   return (
     <div className={titleClass} {...rest}>
-      <Typography className={className} variant={variant}>
+      <Typography as={'h2'} className={className} variant={variant}>
         {children}
       </Typography>
 
