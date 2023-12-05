@@ -1,4 +1,4 @@
-type NavItemType = {
+export type NavItemType = {
   id: number
   path: string
   title: string

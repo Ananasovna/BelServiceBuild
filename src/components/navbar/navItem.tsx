@@ -1,12 +1,13 @@
 'use client'
 
 import { Typography } from '@/common/components/typography/typography'
-import { NavItemType } from '@/components/navbar/navbar'
+
 import { clsx } from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import s from '@/components/navbar/navItem.module.scss'
+import { NavItemType } from '@/common/data/navbarData'
 
 type NavItemProps = {
   navItem: NavItemType
