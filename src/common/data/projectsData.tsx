@@ -3,7 +3,7 @@ import project2 from '../../../public/image/project2.jpg'
 import project3 from '../../../public/image/project3.jpg'
 import { StaticImageData } from 'next/image'
 
-type ProjectType = {
+export type ProjectType = {
   alt: string
   id: number
   img: StaticImageData

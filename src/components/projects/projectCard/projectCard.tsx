@@ -1,8 +1,9 @@
 import { Typography } from '@/common/components/typography/typography'
-import { ProjectType } from '@/components/projects/projects'
+
 import Image from 'next/image'
 
 import s from './projectCard.module.scss'
+import { ProjectType } from '@/common/data/projectsData'
 
 type ProjectCardProps = {
   project: ProjectType
