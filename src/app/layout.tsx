@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 
+import { contactsData } from '@/common/data/contactsData'
 import { Footer } from '@/components/footer/footer'
 import { Header } from '@/components/header/header'
 import Head from 'next/head'
 
 import './globals.css'
-import { contactsData } from '@/common/data/contactsData'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

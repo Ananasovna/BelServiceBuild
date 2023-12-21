@@ -21,21 +21,21 @@ import s from './services.module.scss'
 import { ServicesDataType } from '@/common/data/servicesData'
 
 export const Services = ({ children, data }: ServicesProps) => {
-  const mappedServices = data.servicesList.map(el => {
-    return (
-      <ServiceItem key={el.id} title={`${el.id}. ${el.text}`}>
-        {el.icon}
-      </ServiceItem>
-    )
-  })
-
   return (
     <section>
       <Container className={s.servicesContainer}>
         <TitleContainer className={s.title} variant={'h2'}>
           {data.title}
         </TitleContainer>
-        <div className={s.services}>{mappedServices}</div>
+        <div className={s.services}>
+          {data.servicesList.map(el => {
+            return (
+              <ServiceItem key={el.id} title={`${el.id}. ${el.text}`}>
+                {el.icon}
+              </ServiceItem>
+            )
+          })}
+        </div>
         {children}
       </Container>
     </section>

@@ -1,15 +1,15 @@
+import { contactsData } from '@/common/data/contactsData'
 import { Contacts } from '@/components/contacts/contacts'
 import { Metadata } from 'next'
-import s from './page.module.scss'
 import Image from 'next/image'
 
-import { contactsData } from '@/common/data/contactsData'
+import s from './page.module.scss'
 
 // Этот объект необходимо отредактировать для SEO-продвижения, подробнее о полях здесь https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadata-fields
 export const metadata: Metadata = {
-  title: 'Контакты BelServiceBuild',
   description: '',
   keywords: '',
+  title: 'Контакты BelServiceBuild',
 }
 
 const ContactsPage = () => {
@@ -18,11 +18,11 @@ const ContactsPage = () => {
       <Contacts data={contactsData} />
       <div className={s.imgWrapper}>
         <Image
-          placeholder={'blur'}
-          className={s.photo}
-          src={contactsData.img}
-          priority={true}
           alt={'Контакты фото'}
+          className={s.photo}
+          placeholder={'blur'}
+          sizes={'h-[350px] w-full'}
+          src={contactsData.img}
         />
       </div>
     </div>
