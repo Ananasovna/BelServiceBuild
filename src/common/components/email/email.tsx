@@ -6,15 +6,15 @@ import Link from 'next/link'
 import s from './email.module.scss'
 
 type EmailProps = {
-  height?: string
-  width?: string
-  withBg?: boolean
   className?: string
   email: string
   emailHref: string
+  height?: string
+  width?: string
+  withBg?: boolean
 }
 
-export const Email = ({ withBg = false, email, emailHref }: EmailProps) => {
+export const Email = ({ email, emailHref, withBg = false }: EmailProps) => {
   const contactClass = clsx(s.wrapper, withBg && s.withBg)
 
   return (

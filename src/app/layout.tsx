@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { contactsData } from '@/common/data/contactsData'
+import { contactsData } from '@/components/contacts/contacts'
 import { Footer } from '@/components/footer/footer'
 import { Header } from '@/components/header/header'
 import Head from 'next/head'

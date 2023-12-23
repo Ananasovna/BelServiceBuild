@@ -5,14 +5,14 @@ import { clsx } from 'clsx'
 import s from './address.module.scss'
 
 type AddressProps = {
+  address: string
+  className?: string
   height?: string
   width?: string
   withBg?: boolean
-  className?: string
-  address: string
 }
 
-export const Address = ({ withBg = false, address }: AddressProps) => {
+export const Address = ({ address, withBg = false }: AddressProps) => {
   const contactClass = clsx(s.wrapper, withBg && s.withBg)
 
   return (

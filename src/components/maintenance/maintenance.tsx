@@ -1,27 +1,41 @@
 import { Container } from '@/common/components/container/container'
 import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
 import { Typography } from '@/common/components/typography/typography'
-import { MaintenanceDataType } from '@/common/data/maintanenceData'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import s from './maintenance.module.scss'
 
-type MaintenanceProps = {
-  data: MaintenanceDataType
+import maintenance from '../../../public/image/maintenance.jpg'
+
+export type MaintenanceDataType = {
+  img: StaticImageData
+  text3: string
+  title: string
 }
 
-export const Maintenance = ({ data }: MaintenanceProps) => {
+//Данные для страницы "Комплексное обслуживание"
+export const maintenanceData: MaintenanceDataType = {
+  // Фото для страницы
+  img: maintenance,
+  // Текст для 3 абзаца
+  text3:
+    'Сотрудничая с нами, вы получаете бесперебойную работу инженерных систем и снижаете затраты на текущий и капитальный ремонт.',
+  // Заголовок раздела
+  title: 'Комплексное обслуживание',
+}
+
+export const Maintenance = () => {
   return (
     <section>
       <Container className={s.wrapper}>
-        <TitleContainer variant={'h2'}>{data.title}</TitleContainer>
+        <TitleContainer variant={'h2'}>{maintenanceData.title}</TitleContainer>
         <div className={s.imgWrapper}>
           <Image
             alt={'Комплексное обслуживание фото'}
             className={s.photo}
             placeholder={'blur'}
             sizes={'h-[300px] w-full'}
-            src={data.img}
+            src={maintenanceData.img}
           />
         </div>
         <div className={s.textWrapper}>
@@ -36,7 +50,7 @@ export const Maintenance = ({ data }: MaintenanceProps) => {
             ка&shy;чес&shy;твенно и опера&shy;тивно выполнят весь спектр сантех&shy;нических,
             электро&shy;монтажных и многих других работ при обслуживании Вашего поме&shy;щения.
           </Typography>
-          <Typography className={s.textItalic}>{data.text3}</Typography>
+          <Typography className={s.textItalic}>{maintenanceData.text3}</Typography>
         </div>
       </Container>
     </section>

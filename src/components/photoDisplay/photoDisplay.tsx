@@ -2,22 +2,34 @@
 import { useEffect, useState } from 'react'
 
 import { Typography } from '@/common/components/typography/typography'
-import { PhotoDisplayType } from '@/common/data/photoDisplayData'
 import { clsx } from 'clsx'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import s from './photoDisplay.module.scss'
 
-type PhotoDisplayProps = {
-  data: PhotoDisplayType
+// Импорт фото для фона.Для изменения фото нужно изменить путь импорта фото, изменив название фото после последнего знака / в пути импорта файла
+import mainBg from '../../../public/image/mainBg6.jpg'
+
+export type PhotoDisplayType = {
+  img: StaticImageData
+  title: string
 }
-export const PhotoDisplay = ({ data }: PhotoDisplayProps) => {
+
+//Данные для первого баннера на главной странице
+export const photoDisplayData: PhotoDisplayType = {
+  //Фон для размещения на баннере
+  img: mainBg,
+  //Текст для размещения на баннере
+  title: 'Обслуживание и ремонт коммерческих помещений',
+}
+
+export const PhotoDisplay = () => {
   const [animation, setAnimation] = useState<boolean>(false)
 
   useEffect(() => {
     setTimeout(() => {
       setAnimation(true)
-    }, 1000)
+    }, 300)
   }, [])
 
   return (
@@ -28,11 +40,11 @@ export const PhotoDisplay = ({ data }: PhotoDisplayProps) => {
             alt={'Фоновое изображение'}
             className={s.mainBg}
             sizes={'w-full h-[450p]'}
-            src={data.img}
+            src={photoDisplayData.img}
           />
         </div>
         <Typography className={clsx(s.title, animation && s.animationTitle)} variant={'large'}>
-          {data.title}
+          {photoDisplayData.title}
         </Typography>
       </div>
     </div>

@@ -1,9 +1,8 @@
 import { Typography } from '@/common/components/typography/typography'
-
+import { ProjectType } from '@/components/projects/projects'
 import Image from 'next/image'
 
 import s from './projectCard.module.scss'
-import { ProjectType } from '@/common/data/projectsData'
 
 type ProjectCardProps = {
   project: ProjectType
@@ -17,8 +16,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           alt={project.alt}
           className={s.image}
           placeholder={'blur'}
+          priority
           src={project.img}
-          priority={true}
         />
       </div>
       {project.title !== '' && (

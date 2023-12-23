@@ -1,4 +1,3 @@
-import { maintenanceData } from '@/common/data/maintanenceData'
 import { Maintenance } from '@/components/maintenance/maintenance'
 import { Metadata } from 'next'
 
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 const MaintenancePage = () => {
-  return <Maintenance data={maintenanceData} />
+  return <Maintenance />
 }
 
 export default MaintenancePage

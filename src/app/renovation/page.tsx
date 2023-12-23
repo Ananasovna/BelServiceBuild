@@ -1,4 +1,3 @@
-import { renovationData } from '@/common/data/renovationData'
 import { Renovation } from '@/components/renovation/renovation'
 import { Metadata } from 'next'
 
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 const RenovationPage = () => {
-  return <Renovation data={renovationData} />
+  return <Renovation />
 }
 
 export default RenovationPage

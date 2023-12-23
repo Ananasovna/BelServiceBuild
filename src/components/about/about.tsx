@@ -2,30 +2,79 @@ import { Container } from '@/common/components/container/container'
 import { Item } from '@/common/components/listItem/item'
 import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
 import { Typography } from '@/common/components/typography/typography'
-import { AboutType } from '@/common/data/aboutData'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import s from './about.module.scss'
 
-type AboutPropsType = {
-  data: AboutType
+import logo from '../../../public/image/logoFull.jpg'
+
+export type ListType = {
+  id: number
+  text: string
 }
 
-export const About = ({ data }: AboutPropsType) => {
+export type AboutType = {
+  aboutList: ListType[]
+  logo: StaticImageData
+  text2: string
+  title: string
+}
+
+//Данные для раздела/страницы "О нас"
+export const aboutData: AboutType = {
+  // Список преимуществ компании, чтобы заменить пункты списка - изменить текст в кавычках, при добавлении новых пунктов добавить объект и присвоить ему номер id, при удалении пункта удалить весь объект пункта целиком (с фигурными скобками)
+  aboutList: [
+    { id: 1, text: 'Высокий уровень организации строительно-монтажных работ.' },
+    {
+      id: 2,
+      text: 'Современное высокотехнологичное оборудование.',
+    },
+    {
+      id: 3,
+      text: 'Строгое следование строительным стандартам и требованиям безопасности при выполнении проектно-инженерных работ.',
+    },
+    { id: 4, text: 'Высокая квалификация сотрудников компании.' },
+    {
+      id: 5,
+      text: 'Соблюдение сроков строительства.',
+    },
+    {
+      id: 6,
+      text: 'Оперативное взаимодействие с клиентами.',
+    },
+    {
+      id: 7,
+      text: 'Консультации по вопросам проектирования и дизайна.',
+    },
+    {
+      id: 8,
+      text: 'Конкурентная стоимость строительно-монтажных работ.',
+    },
+  ],
+  // Логотип
+  logo: logo,
+  // Второй абзац, чтобы заменить текст нужно поменять текст внутри кавычек
+  text2:
+    'Мы работаем в Москве, Санкт-Петербурге, Екатеринбурге, Пскове, Череповце, Белгороде, Астрахани, Казани, Самаре, Уфе, Якутске, Новосибирске, Хабаровске, Саратове, Иркутске, Ангарске, Коломне, Перми, Старом Осколе и других городах.',
+  // Заголовок раздела
+  title: 'О нас',
+}
+
+export const About = () => {
   return (
     <section>
       <Container className={s.aboutContainer}>
         <div className={s.logoBlock}>
           <div className={s.wrapper}>
             <TitleContainer align={'left'} className={s.title} variant={'h2'}>
-              {data.title}
+              {aboutData.title}
             </TitleContainer>
             <div className={s.listWrapper}>
               <Typography className={s.listTitle}>
                 <strong>Преимущества компании БелСервисСтрой</strong>
               </Typography>
               <div className={s.list}>
-                {data.aboutList.map(el => (
+                {aboutData.aboutList.map(el => (
                   <Item key={el.id}>{el.text}</Item>
                 ))}
               </div>
@@ -36,7 +85,7 @@ export const About = ({ data }: AboutPropsType) => {
               alt={'Фото компании'}
               className={s.photo}
               sizes={'h-[320px] w-[320px]'}
-              src={data.logo}
+              src={aboutData.logo}
             />
           </div>
         </div>
@@ -55,7 +104,7 @@ export const About = ({ data }: AboutPropsType) => {
           не&shy;исправ&shy;ности и отправят к Вам вы&shy;соко&shy;квали&shy;фицированных
           электриков, отде&shy;лочников, специалистов по вентиляции и кондиционированию.
         </Typography>
-        <Typography className={s.text2}>{data.text2}</Typography>
+        <Typography className={s.text2}>{aboutData.text2}</Typography>
       </Container>
     </section>
   )

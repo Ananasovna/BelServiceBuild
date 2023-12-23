@@ -1,4 +1,3 @@
-import { aboutData } from '@/common/data/aboutData'
 import { About } from '@/components/about/about'
 import { Metadata } from 'next'
 
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 const AboutPage = () => {
-  return <About data={aboutData} />
+  return <About />
 }
 
 export default AboutPage

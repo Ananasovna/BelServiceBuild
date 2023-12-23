@@ -1,4 +1,3 @@
-import { projectsData } from '@/common/data/projectsData'
 import { Projects } from '@/components/projects/projects'
 import { Metadata } from 'next'
 
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Проекты компании BelServiceBuild',
 }
 const ProjectsPage = () => {
-  return <Projects data={projectsData} />
+  return <Projects />
 }
 
 export default ProjectsPage

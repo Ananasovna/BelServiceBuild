@@ -2,20 +2,57 @@ import { Container } from '@/common/components/container/container'
 import { Item } from '@/common/components/listItem/item'
 import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
 import { Typography } from '@/common/components/typography/typography'
-import { RenovationDataType } from '@/common/data/renovationData'
 import { RenovationIcon } from '@/common/icons/renovationIcon'
+import { ListType } from '@/components/about/about'
 
 import s from './renovation.module.scss'
 
-type RenovationProps = {
-  data: RenovationDataType
+export type RenovationDataType = {
+  listTitle: string
+  renovationList: ListType[]
+  title: string
 }
 
-export const Renovation = ({ data }: RenovationProps) => {
+//Данные для раздела "Комплексный ремонт"
+export const renovationData: RenovationDataType = {
+  // Заголовок списка
+  listTitle:
+    'Комплекс ремонта и отделки коммерческих помещений от компании «БелСервисСтрой» предполагает:',
+  // Список услуг, чтобы заменить пункты списка - изменить текст в кавычках, при добавлении новых пунктов добавить объект и присвоить ему номер id, при удалении пункта удалить весь объект пункта целиком (с фигурными скобками)
+  renovationList: [
+    { id: 1, text: 'Демонтажные / монтажные работы по планировке помещений;' },
+    {
+      id: 2,
+      text: 'Демонтаж/монтаж инженерных коммуникаций (вентиляция, канализация, отопление, электропроводка);',
+    },
+    { id: 3, text: 'Замену потолочных подвесных и натяжных конструкций;' },
+    { id: 4, text: 'Черновую отделку стен и полов (штукатурка, шпатлевка, стяжка);' },
+    {
+      id: 5,
+      text: 'Финишную отделку потолков и стен (побелка, покраска, декоративная штукатурка и т.д.);',
+    },
+    {
+      id: 6,
+      text: 'Установку напольных покрытий любого типа (включая укладку керамической плитки);',
+    },
+    {
+      id: 7,
+      text: 'Монтаж климатических, электрических и сантехнических приборов;',
+    },
+    {
+      id: 8,
+      text: 'Уборку строительного мусора.',
+    },
+  ],
+  // Заголовок раздела
+  title: 'Комплексный ремонт',
+}
+
+export const Renovation = () => {
   return (
     <section>
       <Container>
-        <TitleContainer variant={'h2'}>{data.title}</TitleContainer>
+        <TitleContainer variant={'h2'}>{renovationData.title}</TitleContainer>
         <div className={s.bg}>
           <div className={s.textWrapper}>
             <div className={s.iconTextBlock}>
@@ -46,10 +83,10 @@ export const Renovation = ({ data }: RenovationProps) => {
             </div>
             <div className={s.listWrapper}>
               <Typography className={s.listTitle}>
-                <strong>{data.listTitle}</strong>
+                <strong>{renovationData.listTitle}</strong>
               </Typography>
               <div className={s.list}>
-                {data.renovationList.map(el => (
+                {renovationData.renovationList.map(el => (
                   <Item key={el.id}>{el.text}</Item>
                 ))}
               </div>

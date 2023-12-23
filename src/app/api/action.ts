@@ -18,7 +18,7 @@ export async function myAction(data: ValuesType) {
         	E-mail: ${email},
         	Сообщение: ${messageText},
         `,
-    to: 'a.n.ushkova@yandex.ru',
+    to: 'belsbmailer@yandex.ru',
   }
 
   sendEmail(message)

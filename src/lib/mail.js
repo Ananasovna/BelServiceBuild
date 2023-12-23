@@ -12,7 +12,7 @@ const smtpTransport = mailer.createTransport(
     tls: { rejectUnauthorized: false },
   },
   {
-    from: 'a.n.ushkova <a.n.ushkova@yandex.ru>',
+    from: 'belsb.ru <belsbmailer@yandex.ru>',
   }
 )
 

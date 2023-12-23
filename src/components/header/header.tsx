@@ -1,7 +1,7 @@
 import { Container } from '@/common/components/container/container'
 import { Logo } from '@/common/components/logo/logo'
 import { Telephone } from '@/common/components/telephone/telephone'
-import { ContactsDataType } from '@/common/data/contactsData'
+import { ContactsDataType } from '@/components/contacts/contacts'
 import { Navbar } from '@/components/navbar/navbar'
 
 import s from './header.module.scss'
