@@ -1,9 +1,9 @@
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
 
+import { Typography, TypographyVariantType } from '@/common/components/typography/typography'
 import { clsx } from 'clsx'
 
 import s from './titleContainer.module.scss'
-import { Typography, TypographyVariantType } from '@/common/components/typography/typography'
 
 type TitleProps<T extends ElementType> = {
   align?: 'center' | 'left'
@@ -11,12 +11,16 @@ type TitleProps<T extends ElementType> = {
   variant?: TypographyVariantType
 } & ComponentPropsWithoutRef<T>
 
-export const TitleContainer = <T extends ElementType = 'div'>(props: TitleProps<T>) => {
-  const { align = 'center', children, variant, className, as, ...rest } = props
-  const titleClass = clsx(s.titleWrapper, align === 'left' && s.alignLeft)
-
+export const TitleContainer = <T extends ElementType = 'div'>({
+  align = 'center',
+  as,
+  children,
+  className,
+  variant,
+  ...rest
+}: TitleProps<T>) => {
   return (
-    <div className={titleClass} {...rest}>
+    <div className={clsx(s.titleWrapper, align === 'left' && s.alignLeft)} {...rest}>
       <Typography as={'h2'} className={className} variant={variant}>
         {children}
       </Typography>

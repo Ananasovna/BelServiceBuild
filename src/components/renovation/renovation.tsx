@@ -1,20 +1,17 @@
 import { Container } from '@/common/components/container/container'
-
+import { Item } from '@/common/components/listItem/item'
+import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
 import { Typography } from '@/common/components/typography/typography'
+import { RenovationDataType } from '@/common/data/renovationData'
+import { RenovationIcon } from '@/common/icons/renovationIcon'
 
 import s from './renovation.module.scss'
-import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
-import { ListItem } from '@/common/components/listItem/listItem'
-import { RenovationIcon } from '@/common/icons/renovationIcon'
-import { RenovationDataType } from '@/common/data/renovationData'
 
 type RenovationProps = {
   data: RenovationDataType
 }
 
 export const Renovation = ({ data }: RenovationProps) => {
-  const mappedList = data.renovationList.map(el => <ListItem key={el.id}>{el.text}</ListItem>)
-
   return (
     <section>
       <Container>
@@ -51,7 +48,11 @@ export const Renovation = ({ data }: RenovationProps) => {
               <Typography className={s.listTitle}>
                 <strong>{data.listTitle}</strong>
               </Typography>
-              <div className={s.list}>{mappedList}</div>
+              <div className={s.list}>
+                {data.renovationList.map(el => (
+                  <Item key={el.id}>{el.text}</Item>
+                ))}
+              </div>
             </div>
             <Typography className={s.textItalic}>
               Мы проведем ремонт и отделку ком&shy;мер&shy;ческих помещений быстро,

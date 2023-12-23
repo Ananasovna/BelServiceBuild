@@ -1,3 +1,4 @@
+'use client'
 import { Container } from '@/common/components/container/container'
 
 import s from './footer.module.scss'

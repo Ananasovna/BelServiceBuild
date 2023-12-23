@@ -1,9 +1,10 @@
 import { Container } from '@/common/components/container/container'
 import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
-import s from './maintenance.module.scss'
 import { Typography } from '@/common/components/typography/typography'
-import Image from 'next/image'
 import { MaintenanceDataType } from '@/common/data/maintanenceData'
+import Image from 'next/image'
+
+import s from './maintenance.module.scss'
 
 type MaintenanceProps = {
   data: MaintenanceDataType
@@ -16,11 +17,11 @@ export const Maintenance = ({ data }: MaintenanceProps) => {
         <TitleContainer variant={'h2'}>{data.title}</TitleContainer>
         <div className={s.imgWrapper}>
           <Image
-            placeholder={'blur'}
-            className={s.photo}
-            priority={true}
-            src={data.img}
             alt={'Комплексное обслуживание фото'}
+            className={s.photo}
+            placeholder={'blur'}
+            sizes={'h-[300px] w-full'}
+            src={data.img}
           />
         </div>
         <div className={s.textWrapper}>

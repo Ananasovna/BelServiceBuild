@@ -1,36 +1,43 @@
 import { Container } from '@/common/components/container/container'
+import { Item } from '@/common/components/listItem/item'
 import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
 import { Typography } from '@/common/components/typography/typography'
+import { AboutType } from '@/common/data/aboutData'
 import Image from 'next/image'
 
 import s from './about.module.scss'
-import { ListItem } from '@/common/components/listItem/listItem'
-import { AboutType } from '@/common/data/aboutData'
 
 type AboutPropsType = {
   data: AboutType
 }
 
 export const About = ({ data }: AboutPropsType) => {
-  const mappedList = data.aboutList.map(el => <ListItem key={el.id}>{el.text}</ListItem>)
-
   return (
     <section>
       <Container className={s.aboutContainer}>
         <div className={s.logoBlock}>
           <div className={s.wrapper}>
-            <TitleContainer className={s.title} variant={'h2'} align={'left'}>
+            <TitleContainer align={'left'} className={s.title} variant={'h2'}>
               {data.title}
             </TitleContainer>
             <div className={s.listWrapper}>
               <Typography className={s.listTitle}>
                 <strong>Преимущества компании БелСервисСтрой</strong>
               </Typography>
-              <div className={s.list}>{mappedList}</div>
+              <div className={s.list}>
+                {data.aboutList.map(el => (
+                  <Item key={el.id}>{el.text}</Item>
+                ))}
+              </div>
             </div>
           </div>
           <div className={s.photoWrapper}>
-            <Image alt={'Фото компании'} className={s.photo} src={data.logo} />
+            <Image
+              alt={'Фото компании'}
+              className={s.photo}
+              sizes={'h-[320px] w-[320px]'}
+              src={data.logo}
+            />
           </div>
         </div>
         <Typography className={s.text1}>
