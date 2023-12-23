@@ -1,5 +1,5 @@
 import { Container } from '@/common/components/container/container'
-import { Item } from '@/common/components/listItem/item'
+import { ListItem } from '@/common/components/listItem/listItem'
 import { TitleContainer } from '@/common/components/titleContainer/titleContainer'
 import { Typography } from '@/common/components/typography/typography'
 import { RenovationIcon } from '@/common/icons/renovationIcon'
@@ -87,7 +87,7 @@ export const Renovation = () => {
               </Typography>
               <div className={s.list}>
                 {renovationData.renovationList.map(el => (
-                  <Item key={el.id}>{el.text}</Item>
+                  <ListItem key={el.id}>{el.text}</ListItem>
                 ))}
               </div>
             </div>

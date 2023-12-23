@@ -9,7 +9,7 @@ type ListItemProps = {
   children: ReactNode
 }
 
-export const Item = ({ children }: ListItemProps) => {
+export const ListItem = ({ children }: ListItemProps) => {
   return (
     <div className={s.listItem}>
       <div className={s.iconWrapper}>
